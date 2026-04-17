@@ -10,8 +10,11 @@
   --color-accent-gold: #b9965b;
   --color-accent-blue: #1f3476;
 
-  --font-heading: "Playfair Display", Georgia, serif;
+  --font-heading: "Montserrat", "Inter", Arial, sans-serif;
   --font-body: "Inter", Arial, sans-serif;
+  --font-heading-classic: "Playfair Display", Georgia, serif;
+  --font-body-classic: "Inter", Arial, sans-serif;
+  --font-heading-retail: "Montserrat", "Inter", Arial, sans-serif;
 
   --spacing-4: 4px;
   --spacing-8: 8px;

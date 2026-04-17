@@ -66,11 +66,11 @@ select {
   display: inline-block;
   width: fit-content;
   color: var(--color-accent-blue);
-  font-size: 30px;
-  font-style: italic;
-  font-weight: 900;
+  font-family: var(--font-heading-retail);
+  font-size: 28px;
+  font-weight: 800;
   letter-spacing: 0;
-  line-height: 0.8;
+  line-height: 0.9;
 }
 
 .brand-logo span:first-child {
@@ -83,7 +83,6 @@ select {
   top: 27px;
   color: var(--color-primary-wine-80);
   font-size: 8px;
-  font-style: italic;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -210,7 +209,7 @@ select {
 .product-card h3 {
   margin: 0;
   font-family: var(--font-heading);
-  line-height: 1.12;
+  line-height: 1.08;
 }
 
 .mega-intro p:last-child {
@@ -351,7 +350,10 @@ select {
 
 .hero h1 {
   margin: 12px 0 20px;
-  font-size: clamp(44px, 7vw, 88px);
+  max-width: 920px;
+  font-size: clamp(44px, 6.5vw, 82px);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .hero p:not(.eyebrow) {
@@ -370,8 +372,147 @@ select {
   margin-bottom: 32px;
 }
 
+.section-heading--split {
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.7fr);
+  gap: 28px;
+  align-items: end;
+}
+
+.section-heading--split > p {
+  margin: 0;
+  color: var(--color-neutral-gray-600);
+}
+
 .section-heading h2 {
-  font-size: clamp(34px, 4vw, 52px);
+  font-size: clamp(32px, 4vw, 50px);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.type-lab-section {
+  background: #fffdfa;
+}
+
+.type-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.type-card {
+  min-width: 0;
+  min-height: 390px;
+  padding: 24px;
+  border: 1px solid rgba(102, 96, 95, 0.16);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.type-card.is-selected {
+  border-color: rgba(75, 15, 36, 0.48);
+  background: linear-gradient(180deg, #fffdfa 0%, #f7efe8 100%);
+  box-shadow: var(--shadow-lift);
+}
+
+.type-card.is-selected::before {
+  content: "Выбрано для системы";
+  width: fit-content;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-wine-100);
+  color: var(--color-surface);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.type-card__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  color: var(--color-neutral-gray-600);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.type-card__meta strong {
+  color: var(--color-primary-wine-100);
+}
+
+.type-card h3 {
+  margin: 0;
+  color: var(--color-neutral-black);
+}
+
+.type-card p {
+  margin: 0;
+  color: var(--color-neutral-gray-600);
+}
+
+.type-scale {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.type-scale span {
+  padding: 6px 9px;
+  border: 1px solid rgba(75, 15, 36, 0.16);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary-wine-100);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.type-card--editorial {
+  font-family: "Manrope", "Inter", Arial, sans-serif;
+}
+
+.type-card--editorial h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 0.98;
+}
+
+.type-card--neo {
+  font-family: "Manrope", "Inter", Arial, sans-serif;
+}
+
+.type-card--neo h3 {
+  font-family: "Manrope", "Inter", Arial, sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.type-card--classic {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.type-card--classic h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.04;
+}
+
+.type-card--retail {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.type-card--retail h3 {
+  font-family: "Montserrat", "Inter", Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 800;
+  line-height: 1.14;
+  text-transform: uppercase;
 }
 
 .product-grid {
@@ -438,7 +579,9 @@ select {
 
 .product-card h3 {
   margin-top: 8px;
-  font-size: 24px;
+  font-size: 21px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .product-card p {
@@ -503,8 +646,10 @@ select {
 .detail-copy h1 {
   margin: 10px 0 18px;
   font-family: var(--font-heading);
-  font-size: clamp(40px, 5vw, 64px);
+  font-size: clamp(38px, 5vw, 62px);
   line-height: 1.08;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .meta-list {
@@ -555,11 +700,11 @@ select {
   display: inline-flex;
   align-items: baseline;
   color: var(--color-accent-blue);
-  font-size: clamp(40px, 5vw, 68px);
-  font-style: italic;
-  font-weight: 900;
+  font-family: var(--font-heading-retail);
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 800;
   letter-spacing: 0;
-  line-height: 0.95;
+  line-height: 1;
 }
 
 .footer-brand span:first-child {
@@ -672,6 +817,10 @@ select {
     grid-template-columns: 1fr 1fr;
   }
 
+  .type-options {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .mega-menu {
     top: 206px;
   }
@@ -700,6 +849,8 @@ select {
   .menu-grid,
   .appellations,
   .product-grid,
+  .type-options,
+  .section-heading--split,
   .footer-nav {
     grid-template-columns: 1fr;
   }

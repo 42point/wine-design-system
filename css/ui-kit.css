@@ -9,7 +9,7 @@
   --color-white: #ffffff;
   --color-error: #a33a2f;
 
-  --font-heading: "Playfair Display", Georgia, serif;
+  --font-heading: "Montserrat", "Inter", Arial, sans-serif;
   --font-body: "Inter", Arial, sans-serif;
 
   --spacing-1: 4px;
@@ -160,23 +160,28 @@ h1,
 h2,
 h3 {
   font-family: var(--font-heading);
-  line-height: 1.16;
+  line-height: 1.1;
 }
 
 h1 {
   max-width: 780px;
   margin-bottom: 20px;
-  font-size: clamp(42px, 6vw, 76px);
+  font-size: clamp(40px, 5.5vw, 72px);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 h2 {
   margin-bottom: 0;
-  font-size: 42px;
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 h3 {
   margin-bottom: 16px;
-  font-size: 25px;
+  font-size: 24px;
+  font-weight: 800;
 }
 
 .kit-hero p:not(.eyebrow) {
@@ -333,6 +338,8 @@ code {
 .text-h2,
 .text-h3 {
   font-family: var(--font-heading);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .text-h1 {
@@ -510,7 +517,8 @@ code {
 
 .product-meta h3 {
   margin: 8px 0 6px;
-  font-size: 24px;
+  font-size: 21px;
+  text-transform: uppercase;
 }
 
 .product-meta p {
@@ -689,7 +697,9 @@ tbody tr:hover {
   place-items: center;
   color: var(--color-primary-wine-100);
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
   text-align: center;
 }
 
@@ -712,8 +722,10 @@ tbody tr:hover {
 
 .template-card strong {
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 800;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .screen-preview {
@@ -744,7 +756,8 @@ tbody tr:hover {
 .screen-preview__hero h3 {
   max-width: 520px;
   margin: 8px 0 20px;
-  font-size: 52px;
+  font-size: 48px;
+  text-transform: uppercase;
 }
 
 .screen-preview__content {
