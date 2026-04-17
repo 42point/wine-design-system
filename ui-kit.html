@@ -23,24 +23,48 @@
       </a>
       <nav class="side-nav" aria-label="Разделы UI-kit">
         <div class="side-nav__group">
-          <span>Demo pages</span>
-          <a href="index.html">Главная</a>
-          <a href="catalog.html">Каталог</a>
-          <a href="product.html">Карточка товара</a>
-          <a href="bottle-cards.html">Варианты карточек</a>
-          <a href="news-villa-raiano.html">Новость</a>
-          <a href="news-villa-raiano-v2.html">Новость v2</a>
-          <a href="article-guidelines.html">Ред. гайд</a>
-          <a href="about.html">О компании</a>
-          <a href="contacts.html">Контакты</a>
+          <span>00 Status</span>
+          <a href="#production-status">Production Status</a>
         </div>
         <div class="side-nav__group">
-          <span>UI-kit</span>
-          <a href="#foundations">01 Foundations</a>
-          <a href="#components">02 Components</a>
-          <a href="#patterns">03 Patterns</a>
-          <a href="#templates">04 Templates</a>
-          <a href="#screens">05 Screens</a>
+          <span>01 Foundations</span>
+          <a href="#foundations">Overview</a>
+          <a href="#colors">Colors</a>
+          <a href="#typography">Typography</a>
+          <a href="#grid-spacing">Grid & Spacing</a>
+          <a href="#tokens">Tokens</a>
+          <a href="#shadows">Elevation & Shadows</a>
+        </div>
+        <div class="side-nav__group">
+          <span>02 Components</span>
+          <a href="#components">Overview</a>
+          <a href="#buttons">Buttons</a>
+          <a href="#icons">Icon Styles</a>
+          <a href="#product-card">Product Card</a>
+          <a href="#catalog-list-cards">Catalog List Cards</a>
+          <a href="#image-backgrounds">Image Backgrounds</a>
+          <a href="#editorial-components">Editorial Components</a>
+          <a href="#navigation">Navigation</a>
+          <a href="#controls">Controls</a>
+          <a href="#tables">Tables / B2B</a>
+        </div>
+        <div class="side-nav__group">
+          <span>03 Patterns</span>
+          <a href="#patterns">Overview</a>
+          <a href="#catalog-patterns">Catalog Patterns</a>
+          <a href="#content-patterns">Content & Inner Pages</a>
+        </div>
+        <div class="side-nav__group">
+          <span>04 Templates</span>
+          <a href="#templates">Templates</a>
+        </div>
+        <div class="side-nav__group">
+          <span>05 Screens</span>
+          <a href="#screens">Screens</a>
+        </div>
+        <div class="side-nav__group">
+          <span>06 Handoff</span>
+          <a href="#handoff-checklist">Handoff Checklist</a>
         </div>
       </nav>
     </aside>
@@ -62,7 +86,7 @@
         <div class="kit-hero__visual" aria-label="Пример карточки продукта">
           <article class="product-card product-card--featured">
             <div class="product-media product-media--wine">
-              <img class="product-photo" src="assets/images/00073820_1.png" alt="Product bottle" />
+              <img class="product-photo" src="assets/images/00081538_1.png" alt="Product bottle" />
             </div>
             <div class="product-meta">
               <span class="tag tag--filled">Bordeaux</span>
@@ -77,13 +101,136 @@
         </div>
       </header>
 
+      <section id="production-status" class="section">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">00 Production Status</p>
+            <h2>Статус дизайн-системы</h2>
+          </div>
+          <p>Этот блок показывает, насколько UI-kit готов к production handoff: что можно использовать сразу, что требует детализации, и какие правила обязательны для новых экранов.</p>
+        </div>
+        <div class="status-grid">
+          <article class="status-card status-card--ready">
+            <span>Ready</span>
+            <strong>Catalog List Cards</strong>
+            <p>Есть варианты, состояния, фоны изображений, shadows и реальная страница для проверки.</p>
+          </article>
+          <article class="status-card status-card--ready">
+            <span>Ready</span>
+            <strong>Navigation / Mega-menu</strong>
+            <p>Header, dropdown, hover bridge, ширина контейнера и базовые состояния зафиксированы.</p>
+          </article>
+          <article class="status-card status-card--ready">
+            <span>Ready</span>
+            <strong>Foundations</strong>
+            <p>Цветовые роли, типографика, сетка, spacing, tokens и shadows описаны для dev handoff.</p>
+          </article>
+          <article class="status-card status-card--review">
+            <span>Review</span>
+            <strong>Forms / Inputs</strong>
+            <p>Есть default/focus/error, но нужны helper text, required, disabled, textarea и validation patterns.</p>
+          </article>
+          <article class="status-card status-card--ready">
+            <span>Ready</span>
+            <strong>Templates</strong>
+            <p>Шаблоны описывают обязательные блоки, компоненты, screen-ссылки и статус готовности.</p>
+          </article>
+          <article class="status-card status-card--review">
+            <span>Review</span>
+            <strong>Responsive QA</strong>
+            <p>Есть checklist и адаптивные правила, но перед релизом нужен визуальный проход по всем страницам.</p>
+          </article>
+        </div>
+        <div class="production-rules">
+          <article>
+            <span>Production rule</span>
+            <p>Новый компонент нельзя считать готовым без anatomy, variants, states, usage, CSS hook и responsive notes.</p>
+          </article>
+          <article>
+            <span>Screen rule</span>
+            <p>Новый экран должен быть связан с template, иметь статус, ссылку на HTML и список QA-проверок.</p>
+          </article>
+          <article>
+            <span>Content rule</span>
+            <p>Все изображения должны иметь понятный alt, стабильные размеры контейнера и не ломать layout на mobile.</p>
+          </article>
+        </div>
+        <div class="subsection">
+          <h3>Readiness Matrix</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Раздел</th>
+                  <th>Anatomy</th>
+                  <th>States</th>
+                  <th>Usage</th>
+                  <th>Responsive</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Foundations</td>
+                  <td>Да</td>
+                  <td>Да</td>
+                  <td>Да</td>
+                  <td>Да</td>
+                  <td>Ready</td>
+                </tr>
+                <tr>
+                  <td>Buttons</td>
+                  <td>Да</td>
+                  <td>Partial</td>
+                  <td>Да</td>
+                  <td>Да</td>
+                  <td>Review</td>
+                </tr>
+                <tr>
+                  <td>Product Cards</td>
+                  <td>Да</td>
+                  <td>Да</td>
+                  <td>Да</td>
+                  <td>Да</td>
+                  <td>Ready</td>
+                </tr>
+                <tr>
+                  <td>Navigation</td>
+                  <td>Да</td>
+                  <td>Partial</td>
+                  <td>Да</td>
+                  <td>Partial</td>
+                  <td>Review</td>
+                </tr>
+                <tr>
+                  <td>Forms / Controls</td>
+                  <td>Да</td>
+                  <td>Partial</td>
+                  <td>Да</td>
+                  <td>Да</td>
+                  <td>Review</td>
+                </tr>
+                <tr>
+                  <td>Templates / Screens</td>
+                  <td>Да</td>
+                  <td>Да</td>
+                  <td>Да</td>
+                  <td>Да</td>
+                  <td>Ready</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <section id="foundations" class="section">
         <div class="section-heading">
           <p class="eyebrow">01 Foundations</p>
           <h2>База системы</h2>
         </div>
 
-        <div class="subsection">
+        <div id="colors" class="subsection">
           <h3>Colors</h3>
           <div class="swatch-grid">
             <article class="swatch">
@@ -122,9 +269,27 @@
               <code>#B9965B</code>
             </article>
           </div>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Text roles</span>
+              <p>`color.text.primary` = #161616 для заголовков и основного текста. `color.text.muted` = #66605F для meta, captions, описаний и вторичных ссылок.</p>
+            </article>
+            <article class="spec-card">
+              <span>Surface roles</span>
+              <p>`color.background.base` = #F4F6F9 для страницы. `color.surface.default` = #FFFFFF для карточек, форм, таблиц и dropdown.</p>
+            </article>
+            <article class="spec-card">
+              <span>Brand roles</span>
+              <p>`color.primary.wine.100` для CTA, активных состояний и важных ссылок. `color.accent.gold` для labels, eyebrow и editorial accents.</p>
+            </article>
+            <article class="spec-card">
+              <span>State roles</span>
+              <p>Error использует #A33A2F. Success/review/draft пока локальные в UI-kit; перед разработкой их нужно вынести в state tokens.</p>
+            </article>
+          </div>
         </div>
 
-        <div class="subsection typography-specimen">
+        <div id="typography" class="subsection typography-specimen">
           <h3>Typography</h3>
           <div class="type-row">
             <span>Text / Heading / H1 / Montserrat / 48 / 56</span>
@@ -146,9 +311,27 @@
             <span>Text / Label / Caps / Inter / 12 / 16</span>
             <p class="text-label">FEATURED REGION</p>
           </div>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Hero / H1</span>
+              <p>Montserrat 700-800, uppercase, clamp 44-78px, line-height около 0.98-1.08. Используется на главной и крупных внутренних hero.</p>
+            </article>
+            <article class="spec-card">
+              <span>Catalog / Product title</span>
+              <p>Montserrat 800, 22-32px для list-card. Не использовать uppercase в текущем каталоге, чтобы длинные названия читались легче.</p>
+            </article>
+            <article class="spec-card">
+              <span>Article / Lead</span>
+              <p>Inter 22-30px, line-height 1.38-1.48. Используется как первый смысловой абзац в редакционных материалах.</p>
+            </article>
+            <article class="spec-card">
+              <span>Button / Label</span>
+              <p>Inter 700-800, 14-16px. Текст должен помещаться без переноса на desktop; на mobile кнопка может становиться full-width.</p>
+            </article>
+          </div>
         </div>
 
-        <div class="subsection">
+        <div id="grid-spacing" class="subsection">
           <h3>Grid & Spacing</h3>
           <div class="grid-demo" aria-label="Desktop grid 12 columns">
             <span></span><span></span><span></span><span></span><span></span><span></span>
@@ -163,6 +346,20 @@
             <span style="--space: 48px">48</span>
             <span style="--space: 64px">64</span>
           </div>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Container</span>
+              <p>`--container: 1240px`. Desktop width: `min(100% - 40px, var(--container))`; mobile width: `min(100% - 28px, var(--container))`.</p>
+            </article>
+            <article class="spec-card">
+              <span>Breakpoints</span>
+              <p>Desktop default. Tablet: max-width 1080/1100px. Mobile: max-width 720/760px depending on site vs UI-kit shell.</p>
+            </article>
+            <article class="spec-card">
+              <span>Spacing rule</span>
+              <p>Компоненты: 8-16px gap. Карточки/формы: 16-24px padding. Секции: 56-72px vertical padding.</p>
+            </article>
+          </div>
         </div>
 
         <div id="tokens" class="subsection">
@@ -173,6 +370,75 @@
             <code>spacing.md = 16px</code>
             <code>radius.sm = 8px</code>
             <code>shadow.soft = 0 12px 32px rgba(22,22,22,.08)</code>
+            <code>shadow.lift = 0 20px 52px rgba(75,15,36,.14)</code>
+          </div>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Color tokens</span>
+              <p>`color.primary.wine.100`, `color.primary.wine.80`, `color.accent.gold`, `color.accent.blue`, `color.background.base`, `color.surface.default`.</p>
+            </article>
+            <article class="spec-card">
+              <span>Layout tokens</span>
+              <p>`container.max = 1240px`, `spacing.4/8/16/24/32/48/64`, `radius.sm = 8px`, `radius.md = 12px`, `radius.lg = 24px`.</p>
+            </article>
+            <article class="spec-card">
+              <span>Typography tokens</span>
+              <p>`font.heading = Montserrat`, `font.body = Inter`. Размеры текста хранятся как semantic styles, а не только raw px.</p>
+            </article>
+          </div>
+        </div>
+
+        <div id="shadows" class="subsection">
+          <h3>Elevation & Shadows</h3>
+          <div class="shadow-grid">
+            <article class="shadow-card shadow-card--none">
+              <span>Shadow / None</span>
+              <strong>none</strong>
+              <p>Изображения бутылок, прозрачные PNG/JPG внутри карточек, плоские служебные элементы.</p>
+              <code>box-shadow: none;</code>
+            </article>
+            <article class="shadow-card shadow-card--header">
+              <span>Shadow / Header / Sticky</span>
+              <strong>Navigation depth</strong>
+              <p>Только для sticky header: лёгкое отделение от контента при скролле.</p>
+              <code>0 10px 28px rgba(22,22,22,.05)</code>
+            </article>
+            <article class="shadow-card shadow-card--soft">
+              <span>Shadow / Soft</span>
+              <strong>Base surface</strong>
+              <p>Основной токен для карточек, footer-контейнера, форм, contact panels и info-card.</p>
+              <code>0 12px 32px rgba(22,22,22,.08)</code>
+            </article>
+            <article class="shadow-card shadow-card--card">
+              <span>Shadow / Card / Product</span>
+              <strong>Product card</strong>
+              <p>Для bottle-card и визуальных карточек с изображением, когда нужно чуть больше воздуха.</p>
+              <code>0 18px 46px rgba(18,25,38,.08)</code>
+            </article>
+            <article class="shadow-card shadow-card--hover">
+              <span>Shadow / Card / Hover</span>
+              <strong>Interactive lift</strong>
+              <p>Hover/active состояние list-card. Используется вместе с border-color, без изменения размеров.</p>
+              <code>0 22px 54px rgba(25,37,62,.13)</code>
+            </article>
+            <article class="shadow-card shadow-card--lift">
+              <span>Shadow / Lift</span>
+              <strong>Mega-menu</strong>
+              <p>Высокий слой: dropdown, mega-menu, временно поднятые панели.</p>
+              <code>0 20px 52px rgba(75,15,36,.14)</code>
+            </article>
+            <article class="shadow-card shadow-card--editorial">
+              <span>Shadow / Editorial / Image</span>
+              <strong>Hero media</strong>
+              <p>Крупные изображения в статье, где фото должно отделяться от фона страницы.</p>
+              <code>0 22px 58px rgba(25,37,62,.12)</code>
+            </article>
+            <article class="shadow-card shadow-card--focus">
+              <span>Shadow / Focus Ring</span>
+              <strong>Input focus</strong>
+              <p>Не декоративная тень, а доступное состояние focus для search/input.</p>
+              <code>0 0 0 4px rgba(75,15,36,.08)</code>
+            </article>
           </div>
         </div>
       </section>
@@ -184,6 +450,24 @@
         </div>
 
         <div class="subsection">
+          <h3>Component Readiness</h3>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Required anatomy</span>
+              <p>Каждый production-компонент должен иметь anatomy, variants, states, sizes, usage, CSS hooks и responsive notes.</p>
+            </article>
+            <article class="spec-card">
+              <span>Required states</span>
+              <p>Default, Hover, Focus, Active, Disabled. Для data-heavy компонентов также Loading, Empty, Error, Selected.</p>
+            </article>
+            <article class="spec-card">
+              <span>CSS hooks</span>
+              <p>Использовать стабильные классы: `.button--primary`, `.product-card--list`, `.product-image--gold`, `.contact-auth-gate`.</p>
+            </article>
+          </div>
+        </div>
+
+        <div id="buttons" class="subsection">
           <h3>Buttons</h3>
           <div class="component-row">
             <button class="button button--primary">Button / Primary / Default</button>
@@ -204,14 +488,106 @@
               <span>Использование</span>
               <p>Primary для главного CTA, Secondary для каталогов и избранного, Ghost для тихих действий.</p>
             </article>
+            <article class="spec-card">
+              <span>Production gap</span>
+              <p>Добавить disabled, loading, icon-only, full-width mobile. Loading не должен менять ширину кнопки.</p>
+            </article>
           </div>
         </div>
 
-        <div class="subsection">
+        <div id="icons" class="subsection">
+          <h3>Icon Styles</h3>
+          <div class="icon-style-grid">
+            <article class="icon-style-card">
+              <div class="icon-demo-row">
+                <span class="kit-icon kit-icon--line" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+                <span class="kit-icon kit-icon--line" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6 6h15l-2 9H8L6 3H3"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+                </span>
+                <span class="kit-icon kit-icon--line" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+                </span>
+              </div>
+              <span>Icon / Line / Default</span>
+              <p>Основной стиль для header, account, cart, menu chevrons и вторичных действий. Stroke 1.75px, без заливки.</p>
+              <code>stroke-width: 1.75; width: 22px;</code>
+            </article>
+            <article class="icon-style-card">
+              <div class="icon-demo-row">
+                <span class="kit-icon kit-icon--soft" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+                <span class="kit-icon kit-icon--soft" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6 6h15l-2 9H8L6 3H3"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+                </span>
+                <span class="kit-icon kit-icon--soft" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+                </span>
+              </div>
+              <span>Icon / Soft Container</span>
+              <p>Для кликабельных icon buttons: header account/cart, toolbar actions, карточки избранного. Контейнер 44-48px.</p>
+              <code>background: #fff; border: rgba(75,15,36,.14);</code>
+            </article>
+            <article class="icon-style-card">
+              <div class="icon-demo-row">
+                <span class="kit-icon kit-icon--filled" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+                <span class="kit-icon kit-icon--filled" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6 6h15l-2 9H8L6 3H3"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+                </span>
+                <span class="kit-icon kit-icon--filled" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+                </span>
+              </div>
+              <span>Icon / Filled Action</span>
+              <p>Акцентный вариант для primary icon-only действий, selected states и важных быстрых команд. Использовать дозированно.</p>
+              <code>background: color.primary; color: #fff;</code>
+            </article>
+            <article class="icon-style-card">
+              <div class="icon-demo-row">
+                <span class="kit-icon kit-icon--tiny" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+                </span>
+                <span class="kit-icon kit-icon--tiny" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>
+                </span>
+                <span class="kit-icon kit-icon--tiny" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+                </span>
+              </div>
+              <span>Icon / Utility / Small</span>
+              <p>Для chevron, accordion, table sorting и compact filters. Stroke 1.6px, размер 14-18px, без отдельного контейнера.</p>
+              <code>width: 16px; stroke-width: 1.6;</code>
+            </article>
+          </div>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Size scale</span>
+              <p>Utility 16px, navigation 20-22px, icon button 44/48px container, primary action 48px container. SVG всегда квадратный.</p>
+            </article>
+            <article class="spec-card">
+              <span>Stroke rule</span>
+              <p>Базовый stroke 1.75px. Не использовать тяжёлые 2.5-3px иконки в header: они спорят с логотипом и типографикой.</p>
+            </article>
+            <article class="spec-card">
+              <span>States</span>
+              <p>Default, Hover, Focus, Active, Disabled, Selected. Hover меняет border/background, а не толщину линии.</p>
+            </article>
+            <article class="spec-card">
+              <span>CSS hooks</span>
+              <p>`.kit-icon--line`, `.kit-icon--soft`, `.kit-icon--filled`, `.kit-icon--tiny`. В рабочем header использовать тот же визуальный принцип.</p>
+            </article>
+          </div>
+        </div>
+
+        <div id="product-card" class="subsection">
           <h3>Product Card</h3>
           <div class="product-grid product-grid--3">
             <article class="product-card">
-              <div class="product-media product-media--amber"><img class="product-photo" src="assets/images/00073820_1.png" alt="Product bottle" /></div>
+              <div class="product-media product-media--amber"><img class="product-photo" src="assets/images/00081538_1.png" alt="Product bottle" /></div>
               <div class="product-meta">
                 <span class="muted-caps">Tuscany</span>
                 <h3>Brunello di Montalcino</h3>
@@ -223,7 +599,7 @@
               </div>
             </article>
             <article class="product-card product-card--hover">
-              <div class="product-media product-media--wine"><img class="product-photo" src="assets/images/00073820_1.png" alt="Product bottle" /></div>
+              <div class="product-media product-media--wine"><img class="product-photo" src="assets/images/00081538_1.png" alt="Product bottle" /></div>
               <div class="product-meta">
                 <span class="muted-caps">Rioja</span>
                 <h3>Reserva Seleccion Especial</h3>
@@ -235,7 +611,7 @@
               </div>
             </article>
             <article class="product-card product-card--compact">
-              <div class="product-media product-media--green"><img class="product-photo" src="assets/images/00073820_1.png" alt="Product bottle" /></div>
+              <div class="product-media product-media--green"><img class="product-photo" src="assets/images/00081538_1.png" alt="Product bottle" /></div>
               <div class="product-meta">
                 <span class="muted-caps">Mosel</span>
                 <h3>Riesling Kabinett</h3>
@@ -262,7 +638,7 @@
           </div>
         </div>
 
-        <div class="subsection">
+        <div id="catalog-list-cards" class="subsection">
           <h3>Catalog List Cards</h3>
           <div class="spec-grid">
             <article class="spec-card">
@@ -281,13 +657,61 @@
               <span>Card / Product / List / B2B Dense</span>
               <p>Дополнительные параметры: тип, сорт, упаковка, артикул. Для профессионального сравнения SKU.</p>
             </article>
+            <article class="spec-card">
+              <span>Shadow</span>
+              <p>Default использует Shadow / Soft. Hover использует Shadow / Card / Hover + border rgba(75,15,36,.28). Картинки бутылок всегда shadow none.</p>
+            </article>
           </div>
           <div class="hero-actions">
             <a class="button button--secondary" href="bottle-cards.html">Открыть варианты карточек</a>
           </div>
         </div>
 
-        <div class="subsection">
+        <div id="image-backgrounds" class="subsection">
+          <h3>Image Backgrounds</h3>
+          <div class="image-bg-grid">
+            <article class="image-bg-card">
+              <div class="image-bg-preview product-image--gold"><img src="assets/images/00080768_1.png" alt="Bottle on gold gradient" /></div>
+              <span>Image Background / Gold</span>
+              <p>Для белых, сладких, премиальных и акцентных карточек. Хорошо работает с бутылками без прозрачного фона.</p>
+              <code>.product-image--gold { background: linear-gradient(135deg, #b9965b 0%, #d7c18b 48%, #eef2f6 100%); }</code>
+            </article>
+            <article class="image-bg-card">
+              <div class="image-bg-preview product-image--wine"><img src="assets/images/00081538_1.png" alt="Bottle on wine gradient" /></div>
+              <span>Image Background / Wine</span>
+              <p>Для красных вин, премиальных подборок и карточек, где нужен более сильный брендовый акцент.</p>
+              <code>.product-image--wine { background: linear-gradient(135deg, #6d1c36 0%, #9b5366 46%, #e6dce1 100%); }</code>
+            </article>
+            <article class="image-bg-card">
+              <div class="image-bg-preview product-image--green"><img src="assets/images/00081726_1.png" alt="Bottle on green gradient" /></div>
+              <span>Image Background / Green</span>
+              <p>Для белых, органики, свежих регионов и спокойных карточек с холодным фоном.</p>
+              <code>.product-image--green { background: linear-gradient(135deg, #1f4d3a 0%, #88a28e 48%, #eef2e5 100%); }</code>
+            </article>
+            <article class="image-bg-card">
+              <div class="image-bg-preview image-bg-preview--neutral"><img src="assets/images/00081538_1.png" alt="Bottle on neutral gradient" /></div>
+              <span>Image Background / Neutral</span>
+              <p>Для hover, B2B dense и ситуаций, где цвет не должен спорить с информацией.</p>
+              <code>background: linear-gradient(135deg, #eef2f6 0%, #dde6ef 100%);</code>
+            </article>
+          </div>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Правило</span>
+              <p>Градиент применяется только к контейнеру изображения, не к карточке целиком. Так карточка остаётся читаемой и не превращается в баннер.</p>
+            </article>
+            <article class="spec-card">
+              <span>Изображение</span>
+              <p>Бутылка всегда `object-fit: contain`, `box-shadow: none`, без вылета за блок. Для JPG без прозрачности контейнер должен скрывать переполнение.</p>
+            </article>
+            <article class="spec-card">
+              <span>CSS hook</span>
+              <p>Для list-card использовать `.product-image product-image--gold|wine|green`. Для плиток использовать модификаторы media-контейнера.</p>
+            </article>
+          </div>
+        </div>
+
+        <div id="editorial-components" class="subsection">
           <h3>Editorial Components</h3>
           <div class="spec-grid">
             <article class="spec-card">
@@ -306,6 +730,14 @@
               <span>Guidelines</span>
               <p>Отдельная страница с требованиями к заголовкам, тексту, фото, SEO и pre-publish checklist.</p>
             </article>
+            <article class="spec-card">
+              <span>Shadow</span>
+              <p>Editorial hero image использует Shadow / Editorial / Image. Текстовые блоки и сайдбар остаются без декоративной тени, чтобы читать было спокойнее.</p>
+            </article>
+            <article class="spec-card">
+              <span>Production gap</span>
+              <p>Добавить компоненты: Article meta, Article quote, Article image caption, Related products, Related producer.</p>
+            </article>
           </div>
           <div class="hero-actions">
             <a class="button button--secondary" href="news-villa-raiano-v2.html">Новость v2</a>
@@ -313,7 +745,7 @@
           </div>
         </div>
 
-        <div class="subsection">
+        <div id="navigation" class="subsection">
           <h3>Navigation</h3>
           <div class="header-demo">
             <a class="brand brand--compact" href="#"><span class="brand__mark">DP</span><strong>Trade</strong></a>
@@ -338,10 +770,18 @@
               <span>Dropdown</span>
               <p>Mega-menu: visual image, intro, 3 content columns, popular links. Hover bridge удерживает меню.</p>
             </article>
+            <article class="spec-card">
+              <span>Shadow</span>
+              <p>Header sticky использует Shadow / Header / Sticky. Mega-menu использует Shadow / Lift, потому что это слой поверх контента.</p>
+            </article>
+            <article class="spec-card">
+              <span>Production gap</span>
+              <p>Добавить mobile menu, active page state, account logged-in state, cart count, keyboard focus для dropdown.</p>
+            </article>
           </div>
         </div>
 
-        <div class="subsection component-columns">
+        <div id="controls" class="subsection component-columns">
           <div>
             <h3>Filters</h3>
             <div class="control-stack">
@@ -390,10 +830,14 @@
               <span>Tags</span>
               <p>Default для метаданных, Filled для выбранного статуса, Outline для мягких категорий.</p>
             </article>
+            <article class="spec-card">
+              <span>Production gap</span>
+              <p>Нужны helper/error text, required label, disabled controls, textarea, select open state, clear all для фильтров.</p>
+            </article>
           </div>
         </div>
 
-        <div class="subsection">
+        <div id="tables" class="subsection">
           <h3>Tables / B2B</h3>
           <div class="table-wrap">
             <table>
@@ -440,6 +884,10 @@
               <span>Использование</span>
               <p>Прайс-листы, остатки, коммерческие условия и сравнение SKU.</p>
             </article>
+            <article class="spec-card">
+              <span>Production gap</span>
+              <p>Добавить Empty, Loading, Selected, Actions column, numeric alignment, sticky header и mobile fallback.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -449,7 +897,7 @@
           <p class="eyebrow">03 Patterns</p>
           <h2>Паттерны</h2>
         </div>
-        <div class="catalog-pattern">
+        <div id="catalog-patterns" class="catalog-pattern">
           <aside class="filters-panel">
             <h3>Filters / Sidebar</h3>
             <label class="checkbox"><input type="checkbox" checked /> Bordeaux</label>
@@ -466,7 +914,7 @@
             </div>
           </div>
         </div>
-        <div class="subsection">
+        <div id="content-patterns" class="subsection">
           <h3>Content & Inner Pages</h3>
           <div class="spec-grid">
             <article class="spec-card">
@@ -482,6 +930,10 @@
               <p>Контактные панели + форма заявки менеджеру. На мобильном блоки идут одной колонкой.</p>
             </article>
             <article class="spec-card">
+              <span>Pattern / Contacts / Auth Gate</span>
+              <p>Контакты открыты, заявка заблокирована для гостя. Показываем CTA входа/регистрации и disabled-preview формы.</p>
+            </article>
+            <article class="spec-card">
               <span>Pattern / Editorial Guidelines</span>
               <p>Guideline cards + checklist. Используется как внутренняя документация для редакции и контент-менеджера.</p>
             </article>
@@ -490,9 +942,12 @@
       </section>
 
       <section id="templates" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">04 Templates</p>
-          <h2>Шаблоны</h2>
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">04 Templates</p>
+            <h2>Шаблоны</h2>
+          </div>
+          <p>Templates описывают каркас страницы: обязательные блоки, опциональные зоны, компоненты и связь с реальным screen. Это не финальный экран, а правило сборки.</p>
         </div>
         <div class="template-grid">
           <article class="template-card">
@@ -524,48 +979,199 @@
             <strong>Contact panels + manager request</strong>
           </article>
           <article class="template-card">
+            <span>Template / Contacts Auth</span>
+            <strong>Open contacts + gated request form</strong>
+          </article>
+          <article class="template-card">
             <span>Template / Article Guidelines</span>
             <strong>Rules + checklist + photo requirements</strong>
           </article>
         </div>
+        <div class="template-spec-grid">
+          <article class="template-spec">
+            <span>Template / Catalog</span>
+            <h3>Product listing</h3>
+            <p><strong>Required:</strong> Header, catalog head, toolbar, product list, footer.</p>
+            <p><strong>Components:</strong> Catalog List Card, Select, Button Secondary, Mega-menu.</p>
+            <p><strong>Screen:</strong> <a href="catalog.html">catalog.html</a></p>
+            <em>Status: Review, needs mobile QA for dense list.</em>
+          </article>
+          <article class="template-spec">
+            <span>Template / News Article</span>
+            <h3>Editorial story</h3>
+            <p><strong>Required:</strong> Article hero, date/meta, lead, body, image block, footer.</p>
+            <p><strong>Optional:</strong> timeline, quote, photo grid, related products.</p>
+            <p><strong>Screen:</strong> <a href="news-villa-raiano-v2.html">news-villa-raiano-v2.html</a></p>
+            <em>Status: Ready, content/photo rules documented.</em>
+          </article>
+          <article class="template-spec">
+            <span>Template / Contacts Auth</span>
+            <h3>Gated request</h3>
+            <p><strong>Required:</strong> contacts hero, open contacts, auth gate, disabled preview, footer.</p>
+            <p><strong>Components:</strong> Contact Panel, Contact Auth Gate, Button Primary/Secondary.</p>
+            <p><strong>Screen:</strong> <a href="contacts-auth.html">contacts-auth.html</a></p>
+            <em>Status: Review, needs real login/register routes.</em>
+          </article>
+          <article class="template-spec">
+            <span>Template / Home</span>
+            <h3>Commercial landing</h3>
+            <p><strong>Required:</strong> asymmetrical hero, producer block, news block, footer.</p>
+            <p><strong>Components:</strong> Header, Mega-menu, Button Primary, News Card, Producer Card.</p>
+            <p><strong>Screen:</strong> <a href="index.html">index.html</a></p>
+            <em>Status: Ready, visual direction approved.</em>
+          </article>
+          <article class="template-spec">
+            <span>Template / Article Guidelines</span>
+            <h3>Internal documentation</h3>
+            <p><strong>Required:</strong> page intro, rule cards, photo requirements, writing checklist.</p>
+            <p><strong>Components:</strong> Guideline Card, Checklist Card, Editorial Specs.</p>
+            <p><strong>Screen:</strong> <a href="article-guidelines.html">article-guidelines.html</a></p>
+            <em>Status: Ready, supports content production.</em>
+          </article>
+          <article class="template-spec">
+            <span>Template / Product Page</span>
+            <h3>Product detail</h3>
+            <p><strong>Required:</strong> product media, details, price/CTA, characteristics, recommendations.</p>
+            <p><strong>Components:</strong> Product Media, Product Meta, Table, Product Card.</p>
+            <p><strong>Screen:</strong> <a href="product.html">product.html</a></p>
+            <em>Status: Draft, needs final product content model.</em>
+          </article>
+        </div>
       </section>
 
-      <section id="screens" class="section section--last">
-        <div class="section-heading">
-          <p class="eyebrow">05 Screens</p>
-          <h2>Реальные экраны</h2>
-        </div>
-        <div class="screen-preview">
-          <div class="screen-preview__bar"></div>
-          <div class="screen-preview__hero">
-            <p class="eyebrow">Screen / Home / v1</p>
-            <h3>Curated trade catalog</h3>
-            <button class="button button--primary">Смотреть каталог</button>
+      <section id="screens" class="section">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">05 Screens</p>
+            <h2>Реальные экраны</h2>
           </div>
-          <div class="screen-preview__content">
-            <span></span><span></span><span></span>
-          </div>
+          <p>Этот раздел ведёт на конкретные HTML-страницы проекта. В отличие от Templates, здесь фиксируются уже собранные экраны с реальным контентом, header/footer и состояниями.</p>
         </div>
-        <div class="template-grid">
-          <article class="template-card">
+        <div class="screen-grid">
+          <a class="screen-card screen-card--home" href="index.html">
+            <span>Screen / Home / v1</span>
+            <strong>Главная</strong>
+            <p>Hero, производители, новости, рекомендации и общий визуальный тон сайта.</p>
+          </a>
+          <a class="screen-card screen-card--catalog" href="catalog.html">
             <span>Screen / Catalog / v1</span>
-            <strong><a href="catalog.html">Product list cards</a></strong>
-          </article>
-          <article class="template-card">
+            <strong>Каталог</strong>
+            <p>Список товаров, toolbar, сортировка, текущая горизонтальная карточка каталога.</p>
+          </a>
+          <a class="screen-card screen-card--product" href="product.html">
+            <span>Screen / Product / v1</span>
+            <strong>Карточка товара</strong>
+            <p>Продуктовый detail layout: изображение, описание, метаданные и CTA.</p>
+          </a>
+          <a class="screen-card screen-card--cards" href="bottle-cards.html">
+            <span>Screen / Cards Lab / v1</span>
+            <strong>Варианты карточек</strong>
+            <p>Лаборатория карточек бутылок и текущих list-card состояний.</p>
+          </a>
+          <a class="screen-card screen-card--news" href="news-villa-raiano-v2.html">
             <span>Screen / News / v2</span>
-            <strong><a href="news-villa-raiano-v2.html">Villa Raiano editorial</a></strong>
-          </article>
-          <article class="template-card">
+            <strong>Villa Raiano editorial</strong>
+            <p>Журнальная статья с крупными фото, таймлайном, цитатами и финальным акцентом.</p>
+          </a>
+          <a class="screen-card screen-card--about" href="about.html">
             <span>Screen / About / v1</span>
-            <strong><a href="about.html">Company overview</a></strong>
-          </article>
-          <article class="template-card">
+            <strong>О компании</strong>
+            <p>Корпоративная страница: описание, преимущества, спокойная B2B-подача.</p>
+          </a>
+          <a class="screen-card screen-card--contacts" href="contacts.html">
             <span>Screen / Contacts / v1</span>
-            <strong><a href="contacts.html">Contacts and form</a></strong>
-          </article>
-          <article class="template-card">
+            <strong>Контакты</strong>
+            <p>Открытая форма заявки, контактные панели, юридический информационный блок.</p>
+          </a>
+          <a class="screen-card screen-card--auth" href="contacts-auth.html">
+            <span>Screen / Contacts / Auth</span>
+            <strong>Контакты auth</strong>
+            <p>Вариант, где заявка доступна только после входа или регистрации.</p>
+          </a>
+          <a class="screen-card screen-card--guidelines" href="article-guidelines.html">
             <span>Screen / Guidelines / v1</span>
-            <strong><a href="article-guidelines.html">Editorial rules</a></strong>
+            <strong>Редакционный гайд</strong>
+            <p>Требования к статьям, фотографиям, заголовкам, SEO и pre-publish checklist.</p>
+          </a>
+        </div>
+        <div class="spec-grid screen-qa-grid">
+          <article class="spec-card">
+            <span>Screen status</span>
+            <p>Ready: Home, News v2, Guidelines, Cards Lab. Review: Catalog, Contacts Auth. Draft: Product, если не утверждена модель данных.</p>
+          </article>
+          <article class="spec-card">
+            <span>Screen QA</span>
+            <p>Каждый экран проверяется на desktop/tablet/mobile: header/footer, links, image loading, hover/focus states, overflow и читаемость текста.</p>
+          </article>
+          <article class="spec-card">
+            <span>Template link</span>
+            <p>Каждый screen должен соответствовать одному template. Если меняется template, связанные screens обновляются вместе с ним.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="handoff-checklist" class="section section--last">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">06 Handoff</p>
+            <h2>Production checklist</h2>
+          </div>
+          <p>Финальный список проверок перед передачей дизайна в разработку или публикацией новой страницы в UI-kit.</p>
+        </div>
+        <div class="checklist-grid">
+          <article class="checklist-card">
+            <span>Design</span>
+            <ul>
+              <li>Компонент использует существующие tokens: color, spacing, radius, shadow.</li>
+              <li>Есть все состояния: default, hover, focus, active, disabled, error/loading где нужно.</li>
+              <li>Размеры стабильны: hover, текст и динамический контент не двигают layout.</li>
+              <li>Компонент не дублирует уже существующий паттерн без причины.</li>
+            </ul>
+          </article>
+          <article class="checklist-card">
+            <span>Development</span>
+            <ul>
+              <li>Есть CSS hook или class naming по схеме Category / Type / Variant / State.</li>
+              <li>В UI-kit указан usage: где компонент применяется и где не применяется.</li>
+              <li>Все ссылки в demo/screens ведут на реальные HTML-файлы.</li>
+              <li>Нет inline-логики, которая мешает переиспользовать компонент.</li>
+            </ul>
+          </article>
+          <article class="checklist-card">
+            <span>Responsive</span>
+            <ul>
+              <li>Проверены desktop, tablet и mobile.</li>
+              <li>Карточки, таблицы и формы не переполняют контейнер.</li>
+              <li>Текст в кнопках и карточках не обрезается и не накладывается.</li>
+              <li>Таблицы имеют horizontal scroll или мобильную альтернативу.</li>
+            </ul>
+          </article>
+          <article class="checklist-card">
+            <span>Accessibility</span>
+            <ul>
+              <li>Интерактивные элементы имеют видимый focus.</li>
+              <li>Изображения имеют осмысленный alt.</li>
+              <li>Кнопки и ссылки различимы по роли и тексту.</li>
+              <li>Цвет не является единственным способом передать состояние.</li>
+            </ul>
+          </article>
+          <article class="checklist-card">
+            <span>Content</span>
+            <ul>
+              <li>Заголовки соответствуют иерархии H1/H2/H3.</li>
+              <li>Для статей есть лид, визуальные паузы, alt и финальный CTA.</li>
+              <li>Даты, имена, регионы, апелласьоны и награды проверены.</li>
+              <li>Изображения достаточно крупные и не выглядят случайно обрезанными.</li>
+            </ul>
+          </article>
+          <article class="checklist-card">
+            <span>Ready criteria</span>
+            <ul>
+              <li>Раздел имеет описание назначения.</li>
+              <li>Есть пример, спецификация и ссылка на screen, если применимо.</li>
+              <li>Компонент или экран можно собрать без дополнительных устных пояснений.</li>
+              <li>Статус готовности понятен: Ready, Review или Draft.</li>
+            </ul>
           </article>
         </div>
       </section>

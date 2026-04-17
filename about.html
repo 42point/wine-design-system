@@ -165,6 +165,7 @@
           <a href="news-villa-raiano.html">Новости</a>
           <a href="about.html">О компании</a>
           <a href="contacts.html">Контакты</a>
+          <a href="contacts-auth.html">Контакты auth</a>
           <div class="nav-item">
             <button class="nav-trigger" type="button" aria-expanded="false">UI-kit <span class="nav-chevron" aria-hidden="true"><svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" /></svg></span></button>
             <section class="mega-menu" aria-label="UI-kit">
@@ -183,6 +184,7 @@
                 <article class="menu-column">
                   <p class="section-title">Demo pages</p>
                   <a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="product.html">Карточка товара</a><a href="bottle-cards.html">Варианты карточек</a><a href="news-villa-raiano.html">Новость</a><a href="news-villa-raiano-v2.html">Новость v2</a><a href="article-guidelines.html">Ред. гайд</a><a href="about.html">О компании</a><a href="contacts.html">Контакты</a>
+          <a href="contacts-auth.html">Контакты auth</a>
                 </article>
                 <article class="menu-column">
                   <p class="section-title">UI-kit sections</p>
@@ -239,22 +241,78 @@
 </main>
 
 <footer class="site-footer">
-        <div class="container footer-container">
-          <section class="footer-main">
-            <div class="footer-left">
-              <div><a class="footer-brand" href="index.html" aria-label="DP Trade"><span>DP</span>.Trade</a><p class="footer-brand-subtitle">Территория качественного вина</p></div>
-              <div><span class="section-title">Мы в соцсетях</span><div class="social-links"><a href="#" aria-label="Telegram">TG</a><a href="#" aria-label="VK">VK</a></div></div>
-              <article class="contacts-card"><h2>Контакты</h2><a class="contact-link contact-phone" href="tel:+74959379460">+7 (495) 937-94-60</a><a class="contact-link" href="mailto:dptr@dp-trade.ru">dptr@dp-trade.ru</a><a class="button button--primary button--sm" href="contacts.html">Связаться с менеджером</a></article>
-            </div>
-            <section class="footer-nav" aria-label="Навигация по разделам">
-              <article class="nav-group"><h2>Каталог</h2><ul><li><a href="catalog.html">Вина по регионам</a></li><li><a href="#">Франция</a></li><li><a href="#">Италия</a></li><li><a href="#">Испания</a></li><li><a href="#">Новинки</a></li></ul></article>
-              <article class="nav-group"><h2>Клиентам</h2><ul><li><a href="#">Доставка</a></li><li><a href="#">Оплата</a></li><li><a href="#">Как купить</a></li><li><a href="#">Скачать каталог</a></li></ul></article>
-              <article class="nav-group"><h2>Компания</h2><ul><li><a href="about.html">О компании</a></li><li><a href="contacts.html">Контакты</a></li><li><a href="#">Склады</a></li><li><a href="#">Реквизиты</a></li></ul></article>
-              <section class="footer-legal" aria-label="Правовая информация"><p>Интернет-витрина размещает информацию об алкогольной продукции исключительно в целях ознакомления. Дистанционная продажа алкогольной продукции не осуществляется. <a href="#">Подробнее о правовой информации</a></p><p>© 2026 DP-Trade</p></section>
-            </section>
-          </section>
+  <div class="container footer-container">
+    <section class="footer-main">
+      <div class="footer-brand-block">
+        <a class="footer-brand" href="index.html" aria-label="DP Trade">
+          <img src="https://wine-dp-trade.ru/wp-content/uploads/2024/11/logo-500x107.png" alt="DP Trade" width="156" height="33" />
+        </a>
+        <p class="footer-brand-subtitle">Территория качественного вина</p>
+      </div>
+
+      <section class="footer-nav" aria-label="Навигация по разделам">
+        <article class="nav-group">
+          <h2>Каталог</h2>
+          <ul>
+            <li><a href="catalog.html">Вина по регионам</a></li>
+            <li><a href="#">Франция</a></li>
+            <li><a href="#">Италия</a></li>
+            <li><a href="#">Испания</a></li>
+            <li><a href="#">Новинки</a></li>
+          </ul>
+        </article>
+
+        <article class="nav-group">
+          <h2>Клиентам</h2>
+          <ul>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Как купить</a></li>
+            <li><a href="#">Скачать каталог</a></li>
+          </ul>
+        </article>
+
+        <article class="nav-group">
+          <h2>Компания</h2>
+          <ul>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="contacts-auth.html">Контакты auth</a></li>
+            <li><a href="#">Склады</a></li>
+            <li><a href="#">Реквизиты</a></li>
+          </ul>
+        </article>
+      </section>
+
+      <article class="contacts-card">
+        <h2>Контакты</h2>
+        <a class="contact-link contact-phone" href="tel:+74959379460">+7 (495) 937-94-60</a>
+        <a class="contact-link" href="mailto:dptr@dp-trade.ru">dptr@dp-trade.ru</a>
+        <div class="social-links" aria-label="Социальные сети">
+          <a href="#" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 4 3 11.2l6.3 2.2L18 7.7l-6.8 7.1.2 5.2 3-3.3 4.7 3.5L21 4Z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="VK">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h3l2 4.2c.5 1.1 1 1.6 1.3 1.6.2 0 .4-.3.4-1V7h3v3.7c0 .4.2.6.5.6.6 0 1.8-1.6 2.6-4.3H20c-.7 3-1.8 4.8-3 5.7 1.2.8 2.4 2.2 3.2 4.3h-3.4c-.8-1.5-1.8-2.7-2.5-2.7-.4 0-.6.3-.6.8V17h-1.5C8.8 17 6.2 13.9 4 7Z" />
+            </svg>
+          </a>
         </div>
-      </footer>
+      </article>
+
+      <section class="footer-legal" aria-label="Правовая информация">
+        <p>
+          Интернет-витрина размещает информацию об алкогольной продукции исключительно в целях ознакомления.
+          Дистанционная продажа алкогольной продукции не осуществляется.
+          <a href="#">Подробнее о правовой информации</a>
+        </p>
+        <p>© 2026 DP-Trade</p>
+      </section>
+    </section>
+  </div>
+</footer>
     </div>
   </body>
 </html>
