@@ -1,0 +1,31 @@
+:root {
+  --color-primary-wine-100: #4b0f24;
+  --color-primary-wine-80: #6d1c36;
+  --color-neutral-black: #161616;
+  --color-neutral-gray-700: #30343a;
+  --color-neutral-gray-600: #66605f;
+  --color-neutral-gray-300: #d8d3cf;
+  --color-background-base: #faf8f5;
+  --color-surface: #ffffff;
+  --color-accent-gold: #b9965b;
+  --color-accent-blue: #1f3476;
+
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", Arial, sans-serif;
+
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+
+  --shadow-soft: 0 12px 32px rgba(22, 22, 22, 0.08);
+  --shadow-lift: 0 20px 52px rgba(75, 15, 36, 0.14);
+  --container: 1240px;
+}

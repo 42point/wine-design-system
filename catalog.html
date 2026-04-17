@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DP Trade — Catalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <main class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Catalog</p>
+          <h2>Каталог вина</h2>
+        </div>
+        <div class="catalog-layout">
+          <aside class="filters-panel">
+            <h3>Фильтры</h3>
+            <label class="checkbox"><input type="checkbox" checked /> Bordeaux</label>
+            <label class="checkbox"><input type="checkbox" /> Tuscany</label>
+            <label class="checkbox"><input type="checkbox" /> Rioja</label>
+            <label class="checkbox"><input type="checkbox" /> Mosel</label>
+            <a class="button button--primary" href="#">Применить</a>
+            <a class="button button--secondary" href="index.html">На главную</a>
+          </aside>
+          <section class="product-grid">
+            <article class="product-card">
+              <div class="product-media"><span class="bottle"></span></div>
+              <div><span class="muted-caps">Bordeaux</span><h3>Chateau Laroque Grand Cru</h3><p>France · Red dry · 2019</p></div>
+              <div class="product-footer"><strong>3 890 ₽</strong><a class="button button--primary button--sm" href="product.html">Подробнее</a></div>
+            </article>
+            <article class="product-card">
+              <div class="product-media product-media--amber"><span class="bottle"></span></div>
+              <div><span class="muted-caps">Tuscany</span><h3>Brunello di Montalcino</h3><p>Italy · Red dry · 2018</p></div>
+              <div class="product-footer"><strong>4 240 ₽</strong><a class="button button--primary button--sm" href="product.html">Подробнее</a></div>
+            </article>
+            <article class="product-card">
+              <div class="product-media product-media--green"><span class="bottle"></span></div>
+              <div><span class="muted-caps">Mosel</span><h3>Riesling Kabinett</h3><p>Germany · White · 2021</p></div>
+              <div class="product-footer"><strong>2 150 ₽</strong><a class="button button--primary button--sm" href="product.html">Подробнее</a></div>
+            </article>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

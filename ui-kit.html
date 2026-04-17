@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DP Trade — Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/ui-kit.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="#top" aria-label="DP Trade Design System">
+        <span class="brand__mark">DP</span>
+        <span>
+          <strong>DP Trade</strong>
+          <small>Design System</small>
+        </span>
+      </a>
+      <nav class="side-nav" aria-label="Разделы UI-kit">
+        <a href="index.html">Site Preview</a>
+        <a href="#foundations">01 Foundations</a>
+        <a href="#components">02 Components</a>
+        <a href="#patterns">03 Patterns</a>
+        <a href="#templates">04 Templates</a>
+        <a href="#screens">05 Screens</a>
+      </nav>
+    </aside>
+
+    <main id="top" class="page-shell">
+      <header class="kit-hero">
+        <div class="kit-hero__content">
+          <p class="eyebrow">DP Trade — Design System</p>
+          <h1>UI-kit для премиального торгового каталога</h1>
+          <p>
+            Живая HTML/CSS витрина компонентов, токенов, паттернов и экранов для сайта DP Trade.
+            Структура повторяет Figma-файл и использует критичный naming format.
+          </p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="#components">Компоненты</a>
+            <a class="button button--secondary" href="#tokens">Dev tokens</a>
+          </div>
+        </div>
+        <div class="kit-hero__visual" aria-label="Пример карточки продукта">
+          <article class="product-card product-card--featured">
+            <div class="product-media product-media--wine">
+              <span class="bottle"></span>
+            </div>
+            <div class="product-meta">
+              <span class="tag tag--filled">Bordeaux</span>
+              <h3>Chateau Laroque Grand Cru</h3>
+              <p>France · Red dry · 2019 · 0.75 L</p>
+            </div>
+            <div class="product-footer">
+              <strong>от 3 890 ₽</strong>
+              <button class="button button--primary button--sm">В каталог</button>
+            </div>
+          </article>
+        </div>
+      </header>
+
+      <section id="foundations" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">01 Foundations</p>
+          <h2>База системы</h2>
+        </div>
+
+        <div class="subsection">
+          <h3>Colors</h3>
+          <div class="swatch-grid">
+            <article class="swatch">
+              <span style="--swatch: var(--color-primary-wine-100)"></span>
+              <strong>Color / Primary / Wine / 100</strong>
+              <code>#4B0F24</code>
+            </article>
+            <article class="swatch">
+              <span style="--swatch: var(--color-primary-wine-80)"></span>
+              <strong>Color / Primary / Wine / 80</strong>
+              <code>#6D1C36</code>
+            </article>
+            <article class="swatch">
+              <span style="--swatch: var(--color-neutral-black)"></span>
+              <strong>Color / Neutral / Black</strong>
+              <code>#161616</code>
+            </article>
+            <article class="swatch">
+              <span style="--swatch: var(--color-gray-600)"></span>
+              <strong>Color / Neutral / Gray / 600</strong>
+              <code>#66605F</code>
+            </article>
+            <article class="swatch">
+              <span style="--swatch: var(--color-gray-300)"></span>
+              <strong>Color / Neutral / Gray / 300</strong>
+              <code>#D8D3CF</code>
+            </article>
+            <article class="swatch">
+              <span style="--swatch: var(--color-background-base)"></span>
+              <strong>Color / Background / Base</strong>
+              <code>#FAF8F5</code>
+            </article>
+            <article class="swatch">
+              <span style="--swatch: var(--color-accent-gold)"></span>
+              <strong>Color / Accent / Gold</strong>
+              <code>#B9965B</code>
+            </article>
+          </div>
+        </div>
+
+        <div class="subsection typography-specimen">
+          <h3>Typography</h3>
+          <div class="type-row">
+            <span>Text / Heading / H1 / Playfair / 48 / 56</span>
+            <p class="text-h1">Rare wines for trade</p>
+          </div>
+          <div class="type-row">
+            <span>Text / Heading / H2 / Playfair / 36 / 44</span>
+            <p class="text-h2">Catalog collections</p>
+          </div>
+          <div class="type-row">
+            <span>Text / Heading / H3 / Playfair / 28 / 36</span>
+            <p class="text-h3">Producer selection</p>
+          </div>
+          <div class="type-row">
+            <span>Text / Body / Regular / Inter / 16 / 24</span>
+            <p class="text-body">Вина, регионы, партии и коммерческие условия в единой системе.</p>
+          </div>
+          <div class="type-row">
+            <span>Text / Label / Caps / Inter / 12 / 16</span>
+            <p class="text-label">FEATURED REGION</p>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Grid & Spacing</h3>
+          <div class="grid-demo" aria-label="Desktop grid 12 columns">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="spacing-scale">
+            <span style="--space: 4px">4</span>
+            <span style="--space: 8px">8</span>
+            <span style="--space: 16px">16</span>
+            <span style="--space: 24px">24</span>
+            <span style="--space: 32px">32</span>
+            <span style="--space: 48px">48</span>
+            <span style="--space: 64px">64</span>
+          </div>
+        </div>
+
+        <div id="tokens" class="subsection">
+          <h3>Tokens</h3>
+          <div class="token-grid">
+            <code>color.primary = #4B0F24</code>
+            <code>color.text = #161616</code>
+            <code>spacing.md = 16px</code>
+            <code>radius.sm = 8px</code>
+            <code>shadow.soft = 0 12px 32px rgba(22,22,22,.08)</code>
+          </div>
+        </div>
+      </section>
+
+      <section id="components" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">02 Components</p>
+          <h2>Компоненты</h2>
+        </div>
+
+        <div class="subsection">
+          <h3>Buttons</h3>
+          <div class="component-row">
+            <button class="button button--primary">Button / Primary / Default</button>
+            <button class="button button--primary is-hover">Button / Primary / Hover</button>
+            <button class="button button--secondary">Button / Secondary / Default</button>
+            <button class="button button--ghost">Button / Ghost / Default</button>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Product Card</h3>
+          <div class="product-grid product-grid--3">
+            <article class="product-card">
+              <div class="product-media product-media--amber"><span class="bottle"></span></div>
+              <div class="product-meta">
+                <span class="muted-caps">Tuscany</span>
+                <h3>Brunello di Montalcino</h3>
+                <p>Italy · Red dry · 2018 · 0.75 L</p>
+              </div>
+              <div class="product-footer">
+                <strong>4 240 ₽</strong>
+                <button class="button button--primary button--sm">Подробнее</button>
+              </div>
+            </article>
+            <article class="product-card product-card--hover">
+              <div class="product-media product-media--wine"><span class="bottle"></span></div>
+              <div class="product-meta">
+                <span class="muted-caps">Rioja</span>
+                <h3>Reserva Seleccion Especial</h3>
+                <p>Spain · Red dry · 2017 · 0.75 L</p>
+              </div>
+              <div class="product-footer">
+                <strong>2 980 ₽</strong>
+                <button class="button button--primary button--sm">Подробнее</button>
+              </div>
+            </article>
+            <article class="product-card product-card--compact">
+              <div class="product-media product-media--green"><span class="bottle"></span></div>
+              <div class="product-meta">
+                <span class="muted-caps">Mosel</span>
+                <h3>Riesling Kabinett</h3>
+                <p>Germany · White · 2021</p>
+              </div>
+              <div class="product-footer">
+                <strong>2 150 ₽</strong>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Navigation</h3>
+          <div class="header-demo">
+            <a class="brand brand--compact" href="#"><span class="brand__mark">DP</span><strong>Trade</strong></a>
+            <nav>
+              <a href="#">Каталог</a>
+              <a href="#">Регионы</a>
+              <a href="#">Производители</a>
+              <a href="#">B2B</a>
+            </nav>
+            <button class="button button--secondary button--sm">Запросить прайс</button>
+          </div>
+        </div>
+
+        <div class="subsection component-columns">
+          <div>
+            <h3>Filters</h3>
+            <div class="control-stack">
+              <label class="checkbox"><input type="checkbox" /> France</label>
+              <label class="checkbox"><input type="checkbox" checked /> Italy</label>
+              <div class="chip-row">
+                <button class="chip">Red</button>
+                <button class="chip chip--active">White</button>
+                <button class="chip">Sparkling</button>
+              </div>
+              <label class="range">
+                <span>Price range</span>
+                <input type="range" min="0" max="100" value="64" />
+              </label>
+            </div>
+          </div>
+          <div>
+            <h3>Tags & Inputs</h3>
+            <div class="control-stack">
+              <div class="chip-row">
+                <span class="tag">Tag / Default</span>
+                <span class="tag tag--filled">Tag / Filled</span>
+                <span class="tag tag--outline">Tag / Outline</span>
+              </div>
+              <input class="input" placeholder="Input / Default" />
+              <input class="input input--focus" value="Input / Focus" />
+              <input class="input input--error" value="Input / Error" />
+              <select class="input">
+                <option>Select / Default</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3>Tables / B2B</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>SKU</th>
+                  <th>Name</th>
+                  <th>Region</th>
+                  <th>Stock</th>
+                  <th>Trade price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>DP-1042</td>
+                  <td>Chateau Laroque Grand Cru</td>
+                  <td>Bordeaux</td>
+                  <td>48 cases</td>
+                  <td>3 890 ₽</td>
+                </tr>
+                <tr>
+                  <td>DP-1188</td>
+                  <td>Riesling Kabinett</td>
+                  <td>Mosel</td>
+                  <td>32 cases</td>
+                  <td>2 150 ₽</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="patterns" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">03 Patterns</p>
+          <h2>Паттерны</h2>
+        </div>
+        <div class="catalog-pattern">
+          <aside class="filters-panel">
+            <h3>Filters / Sidebar</h3>
+            <label class="checkbox"><input type="checkbox" checked /> Bordeaux</label>
+            <label class="checkbox"><input type="checkbox" /> Tuscany</label>
+            <label class="checkbox"><input type="checkbox" /> Rioja</label>
+            <button class="button button--primary">Применить</button>
+          </aside>
+          <div>
+            <h3>Pattern / Product Grid / 3 col</h3>
+            <div class="product-grid product-grid--3">
+              <article class="mini-card">Bordeaux Grand Cru</article>
+              <article class="mini-card">Tuscany Reserve</article>
+              <article class="mini-card">Mosel Riesling</article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="templates" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">04 Templates</p>
+          <h2>Шаблоны</h2>
+        </div>
+        <div class="template-grid">
+          <article class="template-card">
+            <span>Template / Home</span>
+            <strong>Hero + regions + recommendations</strong>
+          </article>
+          <article class="template-card">
+            <span>Template / Catalog</span>
+            <strong>Filters + product grid + table mode</strong>
+          </article>
+          <article class="template-card">
+            <span>Template / Product Page</span>
+            <strong>Gallery + meta + CTA + availability</strong>
+          </article>
+          <article class="template-card">
+            <span>Template / Producer Page</span>
+            <strong>Story + region + producer catalog</strong>
+          </article>
+        </div>
+      </section>
+
+      <section id="screens" class="section section--last">
+        <div class="section-heading">
+          <p class="eyebrow">05 Screens</p>
+          <h2>Реальные экраны</h2>
+        </div>
+        <div class="screen-preview">
+          <div class="screen-preview__bar"></div>
+          <div class="screen-preview__hero">
+            <p class="eyebrow">Screen / Home / v1</p>
+            <h3>Curated trade catalog</h3>
+            <button class="button button--primary">Смотреть каталог</button>
+          </div>
+          <div class="screen-preview__content">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
