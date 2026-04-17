@@ -48,7 +48,7 @@ select {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 253, 249, 0.94);
+  background: rgba(248, 250, 252, 0.94);
   border-bottom: 1px solid rgba(102, 96, 95, 0.18);
   box-shadow: 0 10px 28px rgba(22, 22, 22, 0.05);
   backdrop-filter: blur(18px);
@@ -248,7 +248,7 @@ select {
   overflow: auto;
   padding: 22px;
   border: 1px solid rgba(102, 96, 95, 0.18);
-  background: #fffdfa;
+  background: #f8fafc;
   box-shadow: var(--shadow-lift);
   transform: translateX(-50%);
   display: none;
@@ -416,7 +416,7 @@ select {
 .button--secondary {
   border-color: rgba(75, 15, 36, 0.24);
   color: var(--color-primary-wine-100);
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(248, 250, 252, 0.78);
 }
 
 .button--sm {
@@ -435,7 +435,7 @@ select {
     url("https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1800&q=80");
   background-position: center;
   background-size: cover;
-  color: #fffdfa;
+  color: #f8fafc;
 }
 
 .hero-copy {
@@ -484,7 +484,7 @@ select {
 }
 
 .type-lab-section {
-  background: #fffdfa;
+  background: #eef2f6;
 }
 
 .type-options {
@@ -513,7 +513,7 @@ select {
 
 .type-card.is-selected {
   border-color: rgba(75, 15, 36, 0.48);
-  background: linear-gradient(180deg, #fffdfa 0%, #f7efe8 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #eef2f6 100%);
   box-shadow: var(--shadow-lift);
 }
 
@@ -531,7 +531,7 @@ select {
 
 .type-card.is-selected-soft {
   border-color: rgba(185, 150, 91, 0.62);
-  background: #fffaf0;
+  background: #f7f4ea;
 }
 
 .type-card.is-selected-soft::before {
@@ -752,7 +752,7 @@ select {
 }
 
 .product-media--amber {
-  background: linear-gradient(140deg, #a8632a, #eaded2);
+  background: linear-gradient(140deg, #a8632a, #dde4ec);
 }
 
 .product-media--green {
@@ -785,7 +785,7 @@ select {
   inset: 54px 8px auto;
   height: 42px;
   border-radius: 4px;
-  background: #f4eee8;
+  background: #eef2f6;
 }
 
 .product-card h3 {
