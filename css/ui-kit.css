@@ -3,8 +3,8 @@
   --color-primary-wine-80: #6d1c36;
   --color-neutral-black: #161616;
   --color-gray-600: #66605f;
-  --color-gray-300: #d8d3cf;
-  --color-background-base: #faf8f5;
+  --color-gray-300: #d9dee6;
+  --color-background-base: #f4f6f9;
   --color-accent-gold: #b9965b;
   --color-white: #ffffff;
   --color-error: #a33a2f;
@@ -59,7 +59,7 @@ select {
   inset: 0 auto 0 0;
   width: 280px;
   padding: 24px;
-  background: #fffdf9;
+  background: #f8fafc;
   border-right: 1px solid rgba(102, 96, 95, 0.18);
   display: flex;
   flex-direction: column;
@@ -131,7 +131,7 @@ select {
   gap: 48px;
   background:
     radial-gradient(circle at 82% 28%, rgba(185, 150, 91, 0.25), transparent 24%),
-    linear-gradient(135deg, #fffdfa 0%, #f4eee8 58%, #eaded2 100%);
+    linear-gradient(135deg, #ffffff 0%, #eef2f6 58%, #dde4ec 100%);
 }
 
 .kit-hero__content {
@@ -463,7 +463,7 @@ code {
   place-items: center;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.42), transparent 48%),
-    var(--media-bg, #eaded2);
+    var(--media-bg, #dde4ec);
 }
 
 .product-card--compact .product-media {
@@ -475,7 +475,7 @@ code {
 }
 
 .product-media--amber {
-  --media-bg: linear-gradient(140deg, #a8632a, #eaded2);
+  --media-bg: linear-gradient(140deg, #a8632a, #dde4ec);
 }
 
 .product-media--green {
@@ -508,7 +508,7 @@ code {
   inset: 54px 8px auto;
   height: 42px;
   border-radius: 4px;
-  background: #f4eee8;
+  background: #eef2f6;
 }
 
 .product-meta {
@@ -671,7 +671,7 @@ td {
 }
 
 th {
-  background: #f0e8df;
+  background: #e8edf3;
   color: var(--color-primary-wine-100);
   font-size: 12px;
   text-transform: uppercase;
@@ -770,7 +770,7 @@ tbody tr:hover {
 .screen-preview__content span {
   min-height: 110px;
   border-radius: var(--radius-sm);
-  background: #f0e8df;
+  background: #e8edf3;
 }
 
 @media (max-width: 1100px) {
