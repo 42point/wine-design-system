@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DP Trade — Product</title>
+    <title>DP Trade — Villa Raiano</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/site.css" />
   </head>
-  <body>
+  <body class="compact-type">
     <div class="site-shell">
-      <header class="site-header">
+<header class="site-header">
         <div class="container header-top">
           <a class="brand-logo" href="index.html" aria-label="DP Trade">
             <img src="https://wine-dp-trade.ru/wp-content/uploads/2024/11/logo-500x107.png" alt="DP Trade" width="156" height="33" />
@@ -197,29 +197,55 @@
           </div>
         </nav>
       </header>
-
-      <main class="section">
-      <div class="container product-detail">
-        <div class="product-media"><img class="product-photo" src="assets/images/00073820_1.png" alt="Chateau Laroque Grand Cru" /></div>
-        <section class="detail-copy">
-          <p class="eyebrow">Product / Default</p>
-          <h1>Chateau Laroque Grand Cru</h1>
-          <p>Премиальная позиция из Bordeaux для ресторанных карт и специализированной розницы.</p>
-          <div class="meta-list">
-            <div><span>Регион</span><strong>Bordeaux</strong></div>
-            <div><span>Тип</span><strong>Red dry</strong></div>
-            <div><span>Год</span><strong>2019</strong></div>
-            <div><span>Объем</span><strong>0.75 L</strong></div>
-            <div><span>Цена</span><strong>3 890 ₽</strong></div>
-          </div>
-          <div class="hero-actions">
-            <a class="button button--primary" href="#">Запросить прайс</a>
-            <a class="button button--secondary" href="catalog.html">Вернуться в каталог</a>
-          </div>
-        </section>
+<main class="content-page">
+  <section class="page-hero page-hero--news">
+    <div class="container page-hero__inner">
+      <div>
+        <p class="eyebrow">Новости / Италия</p>
+        <h1>Villa Raiano: от оливкового масла к одному из лучших Fiano Италии</h1>
+        <p>История семейного хозяйства из Кампании, где любовь к Ирпинии выросла из маслобойного производства в современную винодельню.</p>
       </div>
-    </main>
-      <footer class="site-footer">
+      <aside class="page-hero__meta" aria-label="Параметры новости">
+        <span>Producer spotlight</span>
+        <strong>Villa Raiano</strong>
+        <p>Campania · Irpinia · Fiano di Avellino</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container article-layout">
+      <article class="article-body">
+        <p class="lead">Villa Raiano появилась в 1996 году по инициативе семьи Бассо, известной производством оливкового масла. Первые вина делались в помещениях старого маслобойного завода, а в 2009 году хозяйство переехало в новую винодельню в Ирпинии.</p>
+        <p>Для DP Trade эта история важна не только как биография производителя. Villa Raiano показывает, как локальная ремесленная культура Кампании может стать точной, современной и очень узнаваемой винной стилистикой.</p>
+        <h2>Почему Fiano di Avellino</h2>
+        <p>Фьяно из Авеллино ценят за минеральность, плотную фактуру и способность к развитию в бутылке. В молодых винах часто появляются цитрусовые, груша, персик, травы и медовые оттенки; с возрастом они становятся глубже, прянее и сложнее.</p>
+        <p>Villa Raiano работает с традиционными сортами региона: Fiano, Greco, Falanghina и Aglianico. Такой фокус помогает хозяйству говорить не универсальным языком международного вина, а языком конкретного места.</p>
+        <blockquote>Фокус карточки новости: семейная история, локальный сорт и ценность производителя для профессионального каталога.</blockquote>
+        <h2>Что показать в каталоге</h2>
+        <p>Для товарной страницы и подборок можно вынести происхождение, сорт, стиль, потенциал выдержки и гастрономические пары. В B2B-сценарии особенно полезны быстрые маркеры: регион, апелласьон, тип вина, крепость, объем и доступность партии.</p>
+      </article>
+      <aside class="article-aside">
+        <div class="info-card">
+          <span>Ключевые факты</span>
+          <dl>
+            <div><dt>Страна</dt><dd>Италия</dd></div>
+            <div><dt>Регион</dt><dd>Кампания, Ирпиния</dd></div>
+            <div><dt>Основание</dt><dd>1996</dd></div>
+            <div><dt>Сорта</dt><dd>Fiano, Greco, Aglianico</dd></div>
+          </dl>
+        </div>
+        <div class="info-card info-card--accent">
+          <span>Для UI-kit</span>
+          <p>Эта страница проверяет длинный заголовок новости, текстовую статью, боковую карточку фактов и CTA обратно в каталог.</p>
+          <a class="button button--primary button--sm" href="catalog.html">В каталог</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
         <div class="container footer-container">
           <section class="footer-main">
             <div class="footer-left">

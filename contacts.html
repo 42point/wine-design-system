@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DP Trade — Product</title>
+    <title>DP Trade — Контакты</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/site.css" />
   </head>
-  <body>
+  <body class="compact-type">
     <div class="site-shell">
-      <header class="site-header">
+<header class="site-header">
         <div class="container header-top">
           <a class="brand-logo" href="index.html" aria-label="DP Trade">
             <img src="https://wine-dp-trade.ru/wp-content/uploads/2024/11/logo-500x107.png" alt="DP Trade" width="156" height="33" />
@@ -197,29 +197,52 @@
           </div>
         </nav>
       </header>
-
-      <main class="section">
-      <div class="container product-detail">
-        <div class="product-media"><img class="product-photo" src="assets/images/00073820_1.png" alt="Chateau Laroque Grand Cru" /></div>
-        <section class="detail-copy">
-          <p class="eyebrow">Product / Default</p>
-          <h1>Chateau Laroque Grand Cru</h1>
-          <p>Премиальная позиция из Bordeaux для ресторанных карт и специализированной розницы.</p>
-          <div class="meta-list">
-            <div><span>Регион</span><strong>Bordeaux</strong></div>
-            <div><span>Тип</span><strong>Red dry</strong></div>
-            <div><span>Год</span><strong>2019</strong></div>
-            <div><span>Объем</span><strong>0.75 L</strong></div>
-            <div><span>Цена</span><strong>3 890 ₽</strong></div>
-          </div>
-          <div class="hero-actions">
-            <a class="button button--primary" href="#">Запросить прайс</a>
-            <a class="button button--secondary" href="catalog.html">Вернуться в каталог</a>
-          </div>
-        </section>
+<main class="content-page">
+  <section class="page-hero page-hero--contacts">
+    <div class="container page-hero__inner">
+      <div>
+        <p class="eyebrow">Контакты</p>
+        <h1>Связаться с DP Trade</h1>
+        <p>Для вопросов по каталогу, ассортименту, поставкам и работе с менеджером используйте телефон, почту или форму заявки.</p>
       </div>
-    </main>
-      <footer class="site-footer">
+      <aside class="page-hero__meta" aria-label="Основные контакты">
+        <span>Sales office</span>
+        <strong>+7 (495) 937-94-60</strong>
+        <p>dptr@dp-trade.ru</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contacts-layout">
+      <div class="contact-stack">
+        <article class="contact-panel">
+          <span>Телефон</span>
+          <a href="tel:+74959379460">+7 (495) 937-94-60</a>
+          <p>Для консультаций по ассортименту, поставкам и условиям сотрудничества.</p>
+        </article>
+        <article class="contact-panel">
+          <span>Email</span>
+          <a href="mailto:dptr@dp-trade.ru">dptr@dp-trade.ru</a>
+          <p>Удобно для запросов прайса, карточек производителей и B2B-документов.</p>
+        </article>
+        <article class="contact-panel">
+          <span>Юридическая информация</span>
+          <p>Интернет-витрина размещает информацию об алкогольной продукции исключительно в ознакомительных целях. Дистанционная продажа алкогольной продукции не осуществляется.</p>
+        </article>
+      </div>
+      <form class="contact-form" action="#">
+        <h2>Заявка менеджеру</h2>
+        <label>Имя<input class="input" type="text" placeholder="Как к вам обращаться" /></label>
+        <label>Телефон или email<input class="input" type="text" placeholder="Контакт для ответа" /></label>
+        <label>Сообщение<textarea class="input" rows="5" placeholder="Напишите, что нужно подобрать"></textarea></label>
+        <button class="button button--primary" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
         <div class="container footer-container">
           <section class="footer-main">
             <div class="footer-left">
