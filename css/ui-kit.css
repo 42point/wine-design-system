@@ -102,7 +102,21 @@ select {
 
 .side-nav {
   display: grid;
+  gap: 22px;
+}
+
+.side-nav__group {
+  display: grid;
   gap: 8px;
+}
+
+.side-nav__group span {
+  padding: 0 12px;
+  color: var(--color-accent-gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .side-nav a {
@@ -271,6 +285,37 @@ h3 {
 
 .subsection {
   margin-top: 40px;
+}
+
+.spec-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.spec-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(102, 96, 95, 0.16);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.spec-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-accent-gold);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.spec-card p {
+  margin: 0;
+  color: var(--color-gray-600);
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .swatch-grid {
@@ -464,6 +509,16 @@ code {
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.42), transparent 48%),
     var(--media-bg, #dde4ec);
+}
+
+.product-photo {
+  width: auto;
+  max-width: 132px;
+  height: 190px;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  box-shadow: none;
 }
 
 .product-card--compact .product-media {
@@ -831,7 +886,8 @@ tbody tr:hover {
   .product-grid--3,
   .template-grid,
   .screen-preview__content,
-  .token-grid {
+  .token-grid,
+  .spec-grid {
     grid-template-columns: 1fr;
   }
 

@@ -22,12 +22,21 @@
         </span>
       </a>
       <nav class="side-nav" aria-label="Разделы UI-kit">
-        <a href="index.html">Site Preview</a>
-        <a href="#foundations">01 Foundations</a>
-        <a href="#components">02 Components</a>
-        <a href="#patterns">03 Patterns</a>
-        <a href="#templates">04 Templates</a>
-        <a href="#screens">05 Screens</a>
+        <div class="side-nav__group">
+          <span>Demo pages</span>
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="product.html">Карточка товара</a>
+          <a href="bottle-cards.html">Варианты карточек</a>
+        </div>
+        <div class="side-nav__group">
+          <span>UI-kit</span>
+          <a href="#foundations">01 Foundations</a>
+          <a href="#components">02 Components</a>
+          <a href="#patterns">03 Patterns</a>
+          <a href="#templates">04 Templates</a>
+          <a href="#screens">05 Screens</a>
+        </div>
       </nav>
     </aside>
 
@@ -48,7 +57,7 @@
         <div class="kit-hero__visual" aria-label="Пример карточки продукта">
           <article class="product-card product-card--featured">
             <div class="product-media product-media--wine">
-              <span class="bottle"></span>
+              <img class="product-photo" src="assets/images/00073820_1.png" alt="Product bottle" />
             </div>
             <div class="product-meta">
               <span class="tag tag--filled">Bordeaux</span>
@@ -100,7 +109,7 @@
             <article class="swatch">
               <span style="--swatch: var(--color-background-base)"></span>
               <strong>Color / Background / Base</strong>
-              <code>#FAF8F5</code>
+              <code>#F4F6F9</code>
             </article>
             <article class="swatch">
               <span style="--swatch: var(--color-accent-gold)"></span>
@@ -177,13 +186,27 @@
             <button class="button button--secondary">Button / Secondary / Default</button>
             <button class="button button--ghost">Button / Ghost / Default</button>
           </div>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Анатомия</span>
+              <p>Button / Background + Label. Высота 48px, compact 38px, radius 8px, padding 12/22.</p>
+            </article>
+            <article class="spec-card">
+              <span>Состояния</span>
+              <p>Default, Hover, Focus, Disabled. Hover меняет фон/тень, focus должен иметь видимый outline.</p>
+            </article>
+            <article class="spec-card">
+              <span>Использование</span>
+              <p>Primary для главного CTA, Secondary для каталогов и избранного, Ghost для тихих действий.</p>
+            </article>
+          </div>
         </div>
 
         <div class="subsection">
           <h3>Product Card</h3>
           <div class="product-grid product-grid--3">
             <article class="product-card">
-              <div class="product-media product-media--amber"><span class="bottle"></span></div>
+              <div class="product-media product-media--amber"><img class="product-photo" src="assets/images/00073820_1.png" alt="Product bottle" /></div>
               <div class="product-meta">
                 <span class="muted-caps">Tuscany</span>
                 <h3>Brunello di Montalcino</h3>
@@ -195,7 +218,7 @@
               </div>
             </article>
             <article class="product-card product-card--hover">
-              <div class="product-media product-media--wine"><span class="bottle"></span></div>
+              <div class="product-media product-media--wine"><img class="product-photo" src="assets/images/00073820_1.png" alt="Product bottle" /></div>
               <div class="product-meta">
                 <span class="muted-caps">Rioja</span>
                 <h3>Reserva Seleccion Especial</h3>
@@ -207,7 +230,7 @@
               </div>
             </article>
             <article class="product-card product-card--compact">
-              <div class="product-media product-media--green"><span class="bottle"></span></div>
+              <div class="product-media product-media--green"><img class="product-photo" src="assets/images/00073820_1.png" alt="Product bottle" /></div>
               <div class="product-meta">
                 <span class="muted-caps">Mosel</span>
                 <h3>Riesling Kabinett</h3>
@@ -216,6 +239,20 @@
               <div class="product-footer">
                 <strong>2 150 ₽</strong>
               </div>
+            </article>
+          </div>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Варианты</span>
+              <p>Card / Product / Default, Hover, Compact, List. List используется в каталоге и поисковой выдаче.</p>
+            </article>
+            <article class="spec-card">
+              <span>Анатомия</span>
+              <p>Image, Meta, Name, Details, Price, CTA. Для list-card добавляется Product info + Product buy.</p>
+            </article>
+            <article class="spec-card">
+              <span>Состояния</span>
+              <p>Default, Hover, Favorite, Out of stock. Hover усиливает border/shadow без изменения размеров.</p>
             </article>
           </div>
         </div>
@@ -231,6 +268,20 @@
               <a href="#">B2B</a>
             </nav>
             <button class="button button--secondary button--sm">Запросить прайс</button>
+          </div>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Анатомия</span>
+              <p>Logo, Search, Phone, Account, Cart, Main nav, Mega-menu. Header sticky, две строки.</p>
+            </article>
+            <article class="spec-card">
+              <span>Состояния</span>
+              <p>Default, Sticky, Dropdown open, Focus. У nav hover только underline, без pill-background.</p>
+            </article>
+            <article class="spec-card">
+              <span>Dropdown</span>
+              <p>Mega-menu: visual image, intro, 3 content columns, popular links. Hover bridge удерживает меню.</p>
+            </article>
           </div>
         </div>
 
@@ -268,6 +319,23 @@
             </div>
           </div>
         </div>
+        <div class="subsection">
+          <h3>Controls Specs</h3>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Filters</span>
+              <p>Checkbox Default/Active/Disabled, Chip Default/Active, Range Slider Default/Dragging.</p>
+            </article>
+            <article class="spec-card">
+              <span>Inputs</span>
+              <p>Input Default/Focus/Error/Disabled. Error меняет border и helper text, не меняет высоту поля.</p>
+            </article>
+            <article class="spec-card">
+              <span>Tags</span>
+              <p>Default для метаданных, Filled для выбранного статуса, Outline для мягких категорий.</p>
+            </article>
+          </div>
+        </div>
 
         <div class="subsection">
           <h3>Tables / B2B</h3>
@@ -299,6 +367,23 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+        <div class="subsection">
+          <h3>Table Specs</h3>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <span>Анатомия</span>
+              <p>Table Header, Row, Cell, Numeric cell, Actions. Горизонтальный scroll на мобильных.</p>
+            </article>
+            <article class="spec-card">
+              <span>Состояния</span>
+              <p>Row Default/Hover/Selected, Header, Empty, Loading. Hover используется для B2B-сканирования.</p>
+            </article>
+            <article class="spec-card">
+              <span>Использование</span>
+              <p>Прайс-листы, остатки, коммерческие условия и сравнение SKU.</p>
+            </article>
           </div>
         </div>
       </section>

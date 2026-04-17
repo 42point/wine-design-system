@@ -243,7 +243,7 @@ select {
   position: absolute;
   left: 50%;
   top: 118px;
-  width: min(1180px, calc(100vw - 40px));
+  width: min(var(--container), calc(100vw - 40px));
   max-height: calc(100vh - 142px);
   overflow: auto;
   padding: 22px;
@@ -429,23 +429,31 @@ select {
   min-height: calc(100vh - 124px);
   display: grid;
   align-items: end;
-  padding: 88px 0;
+  padding: 104px 0 72px;
   background:
-    linear-gradient(90deg, rgba(22, 20, 17, 0.78), rgba(22, 20, 17, 0.18)),
+    linear-gradient(100deg, rgba(22, 20, 17, 0.84) 0%, rgba(22, 20, 17, 0.58) 38%, rgba(22, 20, 17, 0.12) 72%),
     url("https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1800&q=80");
-  background-position: center;
+  background-position: center right;
   background-size: cover;
   color: #f8fafc;
 }
 
 .hero-copy {
-  max-width: 760px;
+  width: min(100% - 40px, var(--container));
+  max-width: none;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.62fr) minmax(220px, 0.38fr);
+}
+
+.hero-copy > * {
+  grid-column: 1;
 }
 
 .hero h1 {
   margin: 12px 0 20px;
-  max-width: 920px;
-  font-size: clamp(44px, 6.5vw, 82px);
+  max-width: 860px;
+  font-size: clamp(44px, 6vw, 78px);
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -481,6 +489,95 @@ select {
   font-size: clamp(32px, 4vw, 50px);
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.producer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.producer-card {
+  min-height: 148px;
+  padding: 20px;
+  border: 1px solid rgba(102, 96, 95, 0.14);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  display: grid;
+  align-content: space-between;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.producer-card:hover {
+  border-color: rgba(75, 15, 36, 0.34);
+  transform: translateY(-2px);
+}
+
+.producer-card span,
+.news-card span {
+  color: var(--color-accent-gold);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.producer-card strong {
+  color: var(--color-primary-wine-100);
+  font-family: var(--font-heading);
+  font-size: 24px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.news-section {
+  background: #eef2f6;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.news-card {
+  min-width: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.news-card > div:last-child {
+  padding: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.news-card h3 {
+  margin: 0;
+  color: var(--color-neutral-black);
+  font-family: var(--font-heading);
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.news-card__image {
+  min-height: 190px;
+  background-position: center;
+  background-size: cover;
+}
+
+.news-card__image--catena {
+  background-image: linear-gradient(rgba(22, 22, 22, 0.1), rgba(22, 22, 22, 0.1)), url("https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=900&q=80");
+}
+
+.news-card__image--brand {
+  background-image: linear-gradient(rgba(22, 22, 22, 0.1), rgba(22, 22, 22, 0.1)), url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80");
+}
+
+.news-card__image--italy {
+  background-image: linear-gradient(rgba(22, 22, 22, 0.1), rgba(22, 22, 22, 0.1)), url("https://images.unsplash.com/photo-1528823872057-9c018a7a7553?auto=format&fit=crop&w=900&q=80");
 }
 
 .type-lab-section {
@@ -746,9 +843,20 @@ select {
 .product-media {
   min-height: 220px;
   border-radius: var(--radius-sm);
+  overflow: hidden;
   display: grid;
   place-items: center;
   background: linear-gradient(140deg, #5d1027, #c8a45d);
+}
+
+.product-photo {
+  width: auto;
+  max-width: 132px;
+  height: 190px;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  box-shadow: none;
 }
 
 .product-media--amber {
@@ -815,6 +923,461 @@ select {
   gap: 28px;
 }
 
+.catalog-head {
+  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(520px, 1fr);
+  gap: 24px;
+  align-items: end;
+}
+
+.catalog-head h1 {
+  margin: 6px 0 0;
+  color: var(--color-primary-wine-100);
+  font-family: var(--font-heading);
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.catalog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.catalog-actions > span,
+.catalog-toolbar > span {
+  color: var(--color-neutral-gray-700);
+  font-size: 17px;
+}
+
+.catalog-toolbar {
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.catalog-sort {
+  width: min(100%, 320px);
+  min-height: 40px;
+  padding: 7px 12px;
+}
+
+.product-list {
+  display: grid;
+  gap: 18px;
+}
+
+.product-card--list {
+  min-height: 250px;
+  padding: 20px;
+  grid-template-columns: 210px minmax(0, 1fr) 220px;
+  gap: 28px;
+  align-items: center;
+  border-color: rgba(102, 96, 95, 0.08);
+}
+
+.product-image {
+  min-height: 214px;
+  max-height: 224px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.product-image img {
+  width: auto;
+  max-width: 132px;
+  height: 208px;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  box-shadow: none;
+}
+
+.product-info {
+  min-width: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.product-info h3 {
+  margin: 0;
+  color: var(--color-neutral-black);
+  font-size: clamp(22px, 2.4vw, 32px);
+  font-weight: 800;
+  line-height: 1.18;
+  text-transform: none;
+}
+
+.product-info p {
+  margin: 0;
+  color: var(--color-neutral-gray-600);
+  font-size: 16px;
+  line-height: 1.38;
+}
+
+.product-info .product-origin {
+  font-size: 15px;
+}
+
+.product-buy {
+  min-height: 170px;
+  display: grid;
+  align-content: end;
+  justify-items: end;
+  gap: 56px;
+}
+
+.product-buy strong {
+  color: var(--color-neutral-black);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.product-buy .button {
+  min-width: 180px;
+}
+
+.card-lab-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(244, 246, 249, 0.96)),
+    var(--color-background-base);
+}
+
+.card-lab-head {
+  margin-bottom: 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(320px, 0.42fr);
+  gap: 32px;
+  align-items: end;
+}
+
+.card-lab-head h1 {
+  margin: 8px 0 0;
+  color: var(--color-neutral-black);
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 5vw, 72px);
+  font-weight: 800;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.card-lab-head > p {
+  margin: 0;
+  color: var(--color-neutral-gray-600);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.card-variant-block {
+  display: grid;
+  gap: 18px;
+}
+
+.card-variant-block + .card-variant-block {
+  margin-top: 48px;
+}
+
+.card-variant-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+}
+
+.card-variant-title h2 {
+  margin: 2px 0 0;
+  color: var(--color-neutral-black);
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 2.6vw, 34px);
+  font-weight: 800;
+}
+
+.bottle-card-grid,
+.bottle-card-mix {
+  display: grid;
+  gap: 20px;
+}
+
+.bottle-card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.bottle-card-mix {
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 0.78fr) minmax(320px, 1.3fr);
+  align-items: stretch;
+}
+
+.bottle-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid rgba(102, 96, 95, 0.12);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  box-shadow: 0 18px 46px rgba(18, 25, 38, 0.08);
+  display: grid;
+  gap: 16px;
+}
+
+.bottle-card__media {
+  min-height: 224px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #6a1330 0%, #9e6a4e 48%, #d3b966 100%);
+}
+
+.bottle-card__photo {
+  width: auto;
+  max-width: 142px;
+  height: 198px;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  box-shadow: none;
+}
+
+.bottle-card__body {
+  min-width: 0;
+}
+
+.bottle-card__region {
+  margin: 0 0 9px;
+  color: #b59a5a;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bottle-card h3 {
+  margin: 0;
+  color: var(--color-neutral-black);
+  font-size: clamp(22px, 2.1vw, 28px);
+  font-weight: 800;
+  line-height: 1.08;
+  text-transform: uppercase;
+}
+
+.bottle-card p {
+  margin: 8px 0 0;
+  color: var(--color-neutral-gray-600);
+  font-size: 16px;
+  line-height: 1.42;
+}
+
+.bottle-card__details {
+  font-size: 15px;
+}
+
+.bottle-card__footer {
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.bottle-card__footer strong {
+  color: var(--color-primary-wine-100);
+  font-size: 22px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.bottle-card__footer .button {
+  min-width: 132px;
+}
+
+.bottle-card--tuscany .bottle-card__media {
+  background: linear-gradient(135deg, #b16d2c 0%, #c8ad94 52%, #dfe5eb 100%);
+}
+
+.bottle-card--mosel .bottle-card__media {
+  background: linear-gradient(135deg, #214f3d 0%, #8aa38e 48%, #e8ebdc 100%);
+}
+
+.bottle-card--clean .bottle-card__media {
+  background: linear-gradient(135deg, #edf1f5 0%, #d7dee7 100%);
+}
+
+.bottle-card--clean .bottle-card__photo {
+  height: 214px;
+}
+
+.bottle-card--compact {
+  align-content: start;
+}
+
+.bottle-card--compact .bottle-card__media {
+  min-height: 178px;
+  background: linear-gradient(135deg, #f3f5f8 0%, #dbe2ea 100%);
+}
+
+.bottle-card--compact .bottle-card__photo {
+  height: 154px;
+}
+
+.bottle-card--compact h3 {
+  font-size: 20px;
+}
+
+.bottle-card--compact p {
+  font-size: 15px;
+}
+
+.bottle-card--horizontal {
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.bottle-card--horizontal .bottle-card__media {
+  min-height: 230px;
+  background: linear-gradient(135deg, #e9eef4 0%, #cfd8e3 100%);
+}
+
+.bottle-card--horizontal .bottle-card__photo {
+  height: 208px;
+}
+
+.bottle-card__content {
+  min-width: 0;
+  display: grid;
+  gap: 24px;
+}
+
+.catalog-card-variants {
+  display: grid;
+  gap: 18px;
+}
+
+.catalog-card-sample {
+  display: grid;
+  gap: 10px;
+}
+
+.catalog-card-sample__label {
+  margin: 0;
+  color: var(--color-accent-gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.product-card--list-compact {
+  min-height: 198px;
+  grid-template-columns: 160px minmax(0, 1fr) 190px;
+  gap: 22px;
+}
+
+.product-card--list-compact .product-image {
+  min-height: 164px;
+  max-height: 174px;
+}
+
+.product-card--list-compact .product-image img {
+  max-width: 104px;
+  height: 156px;
+}
+
+.product-card--list-compact .product-info {
+  gap: 8px;
+}
+
+.product-card--list-compact .product-info h3 {
+  font-size: clamp(19px, 2vw, 25px);
+}
+
+.product-card--list-compact .product-info p {
+  font-size: 14px;
+}
+
+.product-card--list-compact .product-buy {
+  min-height: 132px;
+  gap: 28px;
+}
+
+.product-card--list-hover {
+  border-color: rgba(75, 15, 36, 0.28);
+  box-shadow: 0 22px 54px rgba(25, 37, 62, 0.13);
+  transform: translateY(-2px);
+}
+
+.product-card--list-hover .product-image {
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, #eef2f6 0%, #dde6ef 100%);
+}
+
+.product-card--list-hover .button {
+  border-color: var(--color-primary-wine-100);
+}
+
+.product-card--list-color {
+  border-color: rgba(185, 150, 91, 0.24);
+}
+
+.product-card--list-color .product-image {
+  min-height: 214px;
+  border-radius: var(--radius-sm);
+}
+
+.product-image--gold {
+  background: linear-gradient(135deg, #b9965b 0%, #d7c18b 48%, #eef2f6 100%);
+}
+
+.product-image--wine {
+  background: linear-gradient(135deg, #6d1c36 0%, #9b5366 46%, #e6dce1 100%);
+}
+
+.product-image--green {
+  background: linear-gradient(135deg, #1f4d3a 0%, #88a28e 48%, #eef2e5 100%);
+}
+
+.product-card--list-b2b {
+  min-height: 226px;
+  grid-template-columns: 176px minmax(0, 1fr) 190px;
+  gap: 24px;
+}
+
+.product-card--list-b2b .product-image {
+  min-height: 184px;
+  max-height: 194px;
+}
+
+.product-card--list-b2b .product-image img {
+  max-width: 108px;
+  height: 178px;
+}
+
+.product-params {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 14px;
+}
+
+.product-params span {
+  min-width: 0;
+  color: var(--color-neutral-gray-600);
+  font-size: 14px;
+  line-height: 1.32;
+}
+
+.product-card--list-b2b .product-buy {
+  min-height: 148px;
+  gap: 34px;
+}
+
 .filters-panel,
 .info-panel {
   padding: 24px;
@@ -852,6 +1415,11 @@ select {
 
 .product-detail .product-media {
   min-height: 520px;
+}
+
+.product-detail .product-photo {
+  max-width: 220px;
+  height: 420px;
 }
 
 .detail-copy h1 {
@@ -1033,12 +1601,45 @@ select {
 
   .menu-grid,
   .product-grid,
+  .bottle-card-grid,
+  .producer-grid,
+  .news-grid,
   .type-options--five {
     grid-template-columns: 1fr 1fr;
   }
 
+  .card-lab-head,
+  .bottle-card-mix {
+    grid-template-columns: 1fr;
+  }
+
   .type-options {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .catalog-head {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-actions {
+    justify-content: flex-start;
+  }
+
+  .product-card--list {
+    grid-template-columns: 150px minmax(0, 1fr);
+  }
+
+  .product-card--list-compact,
+  .product-card--list-b2b {
+    grid-template-columns: 140px minmax(0, 1fr);
+  }
+
+  .product-buy {
+    grid-column: 2;
+    min-height: auto;
+    align-content: start;
+    justify-items: start;
+    gap: 16px;
   }
 
   .mega-menu {
@@ -1089,6 +1690,9 @@ select {
   .menu-grid,
   .appellations,
   .product-grid,
+  .bottle-card-grid,
+  .producer-grid,
+  .news-grid,
   .type-options--five,
   .type-options,
   .section-heading--split,
@@ -1101,8 +1705,117 @@ select {
     padding: 56px 0;
   }
 
+  .hero-copy {
+    width: min(100% - 28px, var(--container));
+    grid-template-columns: 1fr;
+  }
+
   .section {
     padding: 56px 0;
+  }
+
+  .card-lab-head {
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+
+  .card-lab-head h1 {
+    font-size: 36px;
+  }
+
+  .card-variant-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .bottle-card {
+    padding: 14px;
+  }
+
+  .bottle-card__media {
+    min-height: 190px;
+  }
+
+  .bottle-card__photo {
+    height: 168px;
+  }
+
+  .bottle-card h3 {
+    font-size: 22px;
+  }
+
+  .bottle-card__footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .bottle-card__footer .button {
+    width: 100%;
+  }
+
+  .bottle-card--horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-toolbar,
+  .catalog-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .catalog-sort {
+    width: 100%;
+  }
+
+  .product-card--list {
+    min-height: auto;
+    grid-template-columns: 108px minmax(0, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .product-card--list-compact,
+  .product-card--list-b2b {
+    grid-template-columns: 96px minmax(0, 1fr);
+  }
+
+  .product-image {
+    min-height: 180px;
+    max-height: 186px;
+  }
+
+  .product-image img {
+    max-width: 98px;
+    height: 172px;
+  }
+
+  .product-info h3 {
+    font-size: 19px;
+  }
+
+  .product-info p {
+    font-size: 14px;
+  }
+
+  .product-params {
+    grid-template-columns: 1fr;
+  }
+
+  .product-photo {
+    max-width: 98px;
+    height: 164px;
+  }
+
+  .product-buy {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-buy strong {
+    font-size: 22px;
   }
 
   .footer-container {
