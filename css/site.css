@@ -399,6 +399,10 @@ select {
   gap: 18px;
 }
 
+.type-options--five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .type-card {
   min-width: 0;
   min-height: 390px;
@@ -426,6 +430,23 @@ select {
   border-radius: var(--radius-sm);
   background: var(--color-primary-wine-100);
   color: var(--color-surface);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.type-card.is-selected-soft {
+  border-color: rgba(185, 150, 91, 0.62);
+  background: #fffaf0;
+}
+
+.type-card.is-selected-soft::before {
+  content: "Новый компактный";
+  width: fit-content;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-gold);
+  color: var(--color-neutral-black);
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
@@ -513,6 +534,82 @@ select {
   font-weight: 800;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+.type-card--compact {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.type-card--compact h3 {
+  font-family: "Montserrat", "Inter", Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.16;
+  text-transform: uppercase;
+}
+
+.compact-type {
+  font-size: 15px;
+  line-height: 1.46;
+}
+
+.compact-type .section {
+  padding: 56px 0;
+}
+
+.compact-type .section-heading {
+  margin-bottom: 24px;
+}
+
+.compact-type .section-heading h2 {
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1.12;
+}
+
+.catalog-section .catalog-layout {
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 22px;
+}
+
+.compact-type .filters-panel {
+  padding: 20px;
+  gap: 12px;
+}
+
+.compact-type .filters-panel h3 {
+  margin: 0 0 2px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.product-grid--compact {
+  gap: 16px;
+}
+
+.product-grid--compact .product-card {
+  padding: 14px;
+  gap: 12px;
+}
+
+.product-grid--compact .product-media {
+  min-height: 176px;
+}
+
+.product-grid--compact .bottle {
+  transform: scale(0.82);
+}
+
+.product-grid--compact .product-card h3 {
+  font-size: 17px;
+  line-height: 1.22;
+}
+
+.product-grid--compact .product-card p {
+  font-size: 13px;
+}
+
+.product-grid--compact .product-footer strong {
+  font-size: 16px;
 }
 
 .product-grid {
@@ -813,7 +910,8 @@ select {
   }
 
   .menu-grid,
-  .product-grid {
+  .product-grid,
+  .type-options--five {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -849,6 +947,7 @@ select {
   .menu-grid,
   .appellations,
   .product-grid,
+  .type-options--five,
   .type-options,
   .section-heading--split,
   .footer-nav {
