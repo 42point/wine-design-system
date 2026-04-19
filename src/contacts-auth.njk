@@ -1,0 +1,61 @@
+---
+title: "DP Trade — Контакты / Auth Gate"
+layout: layouts/default
+permalink: /contacts-auth.html
+bodyClass: compact-type
+---
+<main class="content-page contacts-auth-page">
+  <section class="page-hero page-hero--contacts">
+    <div class="container page-hero__inner">
+      <div>
+        <p class="eyebrow">Контакты</p>
+        <h1>Связаться с DP Trade</h1>
+        <p>Контакты открыты для всех, но заявка менеджеру доступна только зарегистрированным или залогиненным пользователям.</p>
+      </div>
+      <aside class="page-hero__meta" aria-label="Основные контакты">
+        <span>Sales office</span>
+        <strong>+7 (495) 937-94-60</strong>
+        <p>dptr@dp-trade.ru</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contacts-layout">
+      <div class="contact-stack">
+        <article class="contact-panel">
+          <span>Телефон</span>
+          <a href="tel:+74959379460">+7 (495) 937-94-60</a>
+          <p>Для консультаций по ассортименту, поставкам и условиям сотрудничества.</p>
+        </article>
+        <article class="contact-panel">
+          <span>Email</span>
+          <a href="mailto:dptr@dp-trade.ru">dptr@dp-trade.ru</a>
+          <p>Удобно для запросов прайса, карточек производителей и B2B-документов.</p>
+        </article>
+        <article class="contact-panel">
+          <span>Юридическая информация</span>
+          <p>Интернет-витрина размещает информацию об алкогольной продукции исключительно в ознакомительных целях. Дистанционная продажа алкогольной продукции не осуществляется.</p>
+        </article>
+      </div>
+<section class="contact-form contact-auth-gate" aria-labelledby="auth-gate-title">
+  <div class="auth-gate__badge">Требуется аккаунт</div>
+  <h2 id="auth-gate-title">Заявка доступна после входа</h2>
+  <p>Мы показываем телефон и email открыто, но форму заявки менеджеру оставляем внутри личного кабинета: так менеджер сразу видит компанию, историю запросов и коммерческий статус клиента.</p>
+  <div class="auth-gate__actions">
+    <a class="button button--primary" href="#">Войти</a>
+    <a class="button button--secondary" href="#">Зарегистрироваться</a>
+  </div>
+  <div class="auth-gate__note">
+    <strong>После входа откроется:</strong>
+    <span>форма заявки, автозаполнение контактов, привязка к компании и история обращений.</span>
+  </div>
+  <div class="locked-form-preview" aria-label="Предпросмотр заблокированной формы">
+    <label>Имя<input class="input" type="text" placeholder="Как к вам обращаться" disabled /></label>
+    <label>Телефон или email<input class="input" type="text" placeholder="Контакт для ответа" disabled /></label>
+    <label>Сообщение<textarea class="input" rows="4" placeholder="Напишите, что нужно подобрать" disabled></textarea></label>
+  </div>
+</section>
+    </div>
+  </section>
+</main>
