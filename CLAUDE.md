@@ -70,7 +70,7 @@ The `ui-kit` page uses `layout: ui-kit` and `css: ui-kit` (links `ui-kit.css` in
 
 ### CSS paths
 
-All CSS paths in `base.njk` are **absolute** (`/css/site.css`), which requires the 11ty dev server — they will not work when opening `_site/` files directly in a browser via `file://`.
+All CSS and JS paths in `base.njk` are **relative** (`css/site.css`, `js/inspector.js`). This works both with the 11ty dev server and when opening `_site/` files directly via `file://`.
 
 ### Design tokens
 
