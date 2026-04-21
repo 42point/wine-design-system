@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
+    <script>
+      (function () {
+        try {
+          var v = localStorage.getItem('dp-design-version') || 'v1';
+          document.documentElement.setAttribute('data-design-version', v);
+        } catch (e) {
+          document.documentElement.setAttribute('data-design-version', 'v1');
+        }
+      })();
+    </script>
 <link rel="stylesheet" href="css/{{ css | default('site') }}.css" />
+<link rel="stylesheet" href="css/v2.css" />
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://metrika.in20.ru/js/pa-LKQHOT3En5k9NYpn80cYX.js"></script>
     <script>
@@ -15,5 +26,6 @@
   <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
     {{ content | safe }}
     <script src="js/inspector.js"></script>
+    <script src="js/design-switcher.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,399 @@
+/* =========================================================================
+   DP Trade — V2 overrides (design audit followup)
+   Activates when <html data-design-version="v2">. V1 stays untouched.
+   ========================================================================= */
+
+/* ── Design toggle (visible in both versions) ─────────────────────────── */
+.design-toggle {
+  display: inline-flex;
+  padding: 2px;
+  border: 1px solid rgba(22, 22, 22, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  gap: 2px;
+}
+.design-toggle__btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font: 600 12px/1 var(--font-body);
+  letter-spacing: 0.06em;
+  color: var(--color-neutral-gray-700);
+  cursor: pointer;
+}
+.design-toggle__btn.is-active {
+  background: var(--color-primary-wine-100);
+  color: #fff;
+}
+
+/* V2-only DOM nodes hidden under V1 */
+[data-design-version="v1"] [data-v2-only] { display: none !important; }
+[data-design-version="v2"] [data-v2-hide] { display: none !important; }
+
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding-top: 24px;
+  padding-bottom: 8px;
+  font-size: 13px;
+  color: var(--color-neutral-gray-600);
+}
+.breadcrumbs a {
+  color: var(--color-neutral-gray-600);
+  text-decoration: none;
+}
+.breadcrumbs a:hover { color: var(--color-primary-wine-100); }
+.breadcrumbs [aria-current="page"] { color: var(--color-neutral-black); }
+
+/* Form success */
+.form-success {
+  margin-top: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: #F5F0E8;
+  color: var(--color-primary-wine-100);
+  font-weight: 500;
+}
+
+/* =========================================================================
+   V2 SCOPE — everything below only applies when data-design-version="v2"
+   ========================================================================= */
+
+/* ── Global typography ────────────────────────────────────────────────── */
+[data-design-version="v2"] body {
+  font-family: var(--font-body);
+  background: var(--color-background-base);
+}
+
+[data-design-version="v2"] h1,
+[data-design-version="v2"] h2,
+[data-design-version="v2"] h3,
+[data-design-version="v2"] h4 {
+  font-family: var(--font-heading);
+  text-transform: none !important;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+[data-design-version="v2"] .brand-logo,
+[data-design-version="v2"] .brand-logo span:first-child {
+  text-transform: none;
+}
+[data-design-version="v2"] .brand-logo small { font-size: 12px; }
+
+[data-design-version="v2"] .phone-link {
+  color: var(--color-primary-wine-100);
+  font-weight: 500;
+}
+
+/* ── Hero (home) ──────────────────────────────────────────────────────── */
+[data-design-version="v2"] .hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 500;
+  text-transform: none !important;
+  letter-spacing: 0;
+  line-height: 1.05;
+}
+
+[data-design-version="v2"] .section-heading h2 {
+  font-weight: 500;
+  text-transform: none !important;
+  letter-spacing: 0;
+}
+
+/* ── Product card (grid) ──────────────────────────────────────────────── */
+[data-design-version="v2"] .product-card {
+  background: var(--color-surface-warm);
+  border-color: rgba(22, 22, 22, 0.08);
+}
+
+[data-design-version="v2"] .product-media,
+[data-design-version="v2"] .product-media--amber,
+[data-design-version="v2"] .product-media--green {
+  background: #F5F0E8 !important;
+}
+
+[data-design-version="v2"] .product-card h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: none !important;
+  letter-spacing: 0;
+}
+
+[data-design-version="v2"] .product-footer {
+  padding-top: 14px;
+  border-top: 1px solid rgba(22, 22, 22, 0.08);
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+[data-design-version="v2"] .product-footer strong {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary-wine-100);
+}
+[data-design-version="v2"] .product-footer .button,
+[data-design-version="v2"] .product-card .button--primary {
+  background: transparent;
+  color: var(--color-primary-wine-100);
+  border: 1px solid var(--color-primary-wine-100);
+  width: 100%;
+  justify-content: center;
+  font-weight: 500;
+}
+[data-design-version="v2"] .product-footer .button:hover,
+[data-design-version="v2"] .product-card .button--primary:hover {
+  background: var(--color-primary-wine-100);
+  color: #fff;
+}
+
+/* Compact grid on home */
+[data-design-version="v2"] .product-grid--compact .product-card h3 {
+  font-size: 17px;
+}
+
+/* List cards (catalog) — same typography refresh */
+[data-design-version="v2"] .product-card--list h3 {
+  font-family: var(--font-heading);
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+/* ── Catalog head ─────────────────────────────────────────────────────── */
+[data-design-version="v2"] .catalog-head h1 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-transform: none !important;
+  letter-spacing: 0;
+}
+
+/* ── Mega menu ────────────────────────────────────────────────────────── */
+[data-design-version="v2"] .mega-intro h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-family: var(--font-heading);
+}
+
+[data-design-version="v2"] .visual-column img {
+  max-width: 160px;
+  max-height: 100px;
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+[data-design-version="v2"] .country-link {
+  color: var(--color-accent-gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+[data-design-version="v2"] .appellation-group a:not(.country-link) {
+  padding-left: 12px;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 400;
+}
+
+[data-design-version="v2"] .popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+[data-design-version="v2"] .popular-list a {
+  min-width: 120px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border: 1px solid rgba(22, 22, 22, 0.12);
+  border-radius: 999px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+/* Producer cards */
+[data-design-version="v2"] .producer-card strong,
+[data-design-version="v2"] .news-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-transform: none !important;
+  letter-spacing: 0;
+}
+[data-design-version="v2"] .news-section { background: var(--color-surface-warm); }
+
+/* ── Page hero (about / contacts / guidelines) ────────────────────────── */
+[data-design-version="v2"] .page-hero h1 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-transform: none !important;
+  letter-spacing: 0;
+  line-height: 1.08;
+}
+
+[data-design-version="v2"] .page-hero--about h1 {
+  font-size: clamp(40px, 4vw, 56px);
+}
+
+[data-design-version="v2"] .page-hero--contacts {
+  padding: 48px 0 24px;
+  background-image: none;
+  background: var(--color-background-base);
+  color: var(--color-neutral-black);
+}
+[data-design-version="v2"] .page-hero--contacts h1 {
+  font-size: clamp(32px, 3.4vw, 48px);
+  color: var(--color-neutral-black);
+}
+[data-design-version="v2"] .page-hero--contacts p {
+  color: var(--color-neutral-gray-700);
+  font-size: 16px;
+}
+[data-design-version="v2"] .page-hero--contacts .page-hero__meta {
+  box-shadow: none;
+  background: var(--color-surface-warm);
+}
+[data-design-version="v2"] .page-hero__meta strong {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: none !important;
+  letter-spacing: 0;
+  color: var(--color-primary-wine-100);
+}
+
+/* ── About / article ──────────────────────────────────────────────────── */
+[data-design-version="v2"] .article-body { max-width: 640px; }
+
+[data-design-version="v2"] .article-body h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 500;
+  text-transform: none !important;
+  letter-spacing: 0;
+}
+
+[data-design-version="v2"] .article-body .lead {
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+[data-design-version="v2"] .article-body blockquote {
+  border-left: 1px solid rgba(22, 22, 22, 0.2);
+  background: transparent;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-neutral-black);
+}
+
+[data-design-version="v2"] .feature-card {
+  min-height: 0;
+  align-content: start;
+  gap: 8px;
+}
+[data-design-version="v2"] .feature-card h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+[data-design-version="v2"] .muted-section,
+[data-design-version="v2"] .info-card--accent {
+  background: var(--color-surface-warm);
+}
+
+/* ── Contacts ─────────────────────────────────────────────────────────── */
+[data-design-version="v2"] .contact-panel a {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--color-primary-wine-100);
+}
+
+/* Move legal block to bottom of stack */
+[data-design-version="v2"] .contact-stack {
+  display: flex;
+  flex-direction: column;
+}
+[data-design-version="v2"] .contact-panel:has(> span:only-of-type) {
+  /* no-op fallback; target by text below if :has unsupported */
+}
+[data-design-version="v2"] .contact-stack .contact-panel:last-child {
+  order: 99;
+  font-size: 13px;
+  background: transparent;
+  box-shadow: none;
+  border-color: rgba(22, 22, 22, 0.08);
+  padding: 16px 20px;
+}
+[data-design-version="v2"] .contact-stack .contact-panel:last-child span {
+  color: var(--color-neutral-gray-600);
+  font-weight: 500;
+}
+
+/* Contact form */
+[data-design-version="v2"] .contact-form h2 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: none !important;
+  letter-spacing: 0;
+}
+[data-design-version="v2"] .contact-form label {
+  font-weight: 400;
+  color: var(--color-neutral-gray-700);
+}
+
+/* ── Buttons (global) ─────────────────────────────────────────────────── */
+[data-design-version="v2"] .button--primary {
+  background: var(--color-primary-wine-100);
+  border-color: var(--color-primary-wine-100);
+  text-transform: none;
+  letter-spacing: 0;
+}
+[data-design-version="v2"] .button--secondary {
+  background: var(--color-surface-warm);
+  color: var(--color-primary-wine-100);
+  border-color: transparent;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ── Product detail page ──────────────────────────────────────────────── */
+[data-design-version="v2"] .detail-copy h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 500;
+  text-transform: none !important;
+  letter-spacing: 0;
+}
+[data-design-version="v2"] .detail-copy > p:not(.eyebrow) {
+  max-width: 66ch;
+}
+[data-design-version="v2"] .detail-copy .hero-actions { margin-top: 16px; }
+
+/* Remove cool background conflicts */
+[data-design-version="v2"] .news-section,
+[data-design-version="v2"] .section--muted {
+  background: var(--color-surface-warm);
+}

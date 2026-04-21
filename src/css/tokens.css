@@ -638,6 +638,7 @@
   --color-neutral-gray-300: #d9dee6;
   --color-background-base: #f4f6f9;
   --color-surface: #ffffff;
+  --color-surface-warm: #F5F0E8;
   --color-accent-gold: #b9965b;
   --color-accent-blue: #1f3476;
 
@@ -662,4 +663,23 @@
   --shadow-soft: 0 12px 32px rgba(22, 22, 22, 0.08);
   --shadow-lift: 0 20px 52px rgba(75, 15, 36, 0.14);
   --container: 1240px;
+}
+
+/* ── V2 design version (design audit followup) ───────────────────────── */
+:root[data-design-version="v2"] {
+  --color-primary-wine-100: #7D021D;
+  --color-primary-wine-80: #9b1a33;
+  --color-background-base: #FFFDFA;
+  --color-surface: #ffffff;
+  --color-surface-warm: #F5F0E8;
+  --color-accent-blue: #7D021D;
+
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Manrope", "Inter", Arial, sans-serif;
+  --font-heading-retail: "Cormorant Garamond", Georgia, serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --shadow-lift: 0 20px 52px rgba(125, 2, 29, 0.12);
 }
