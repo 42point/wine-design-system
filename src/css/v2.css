@@ -27,6 +27,15 @@
   background: var(--color-primary-wine-100);
   color: #fff;
 }
+.design-toggle--nav {
+  margin-left: auto;
+  align-self: center;
+  flex-shrink: 0;
+}
+.design-toggle--uikit {
+  margin: 16px 24px 0;
+  align-self: flex-start;
+}
 
 /* V2-only DOM nodes hidden under V1 */
 [data-design-version="v1"] [data-v2-only] { display: none !important; }
